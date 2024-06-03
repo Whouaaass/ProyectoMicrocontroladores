@@ -1,0 +1,153 @@
+\doxysection{Referencia de la estructura buffer}
+\hypertarget{structbuffer}{}\label{structbuffer}\index{buffer@{buffer}}
+
+
+Estructura que crea un buffer Es usado especialmente para controlar el input del Keypad.  
+
+
+
+
+{\ttfamily \#include $<$variables.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structbuffer_ad709936a1419962ee0ae78015cd89f0c}{push}} (char chr)
+\begin{DoxyCompactList}\small\item\em Método para agregar un carácter al buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structbuffer_a519e92404291b3054f04d3247dbf9e40}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Método para limpiar el buffer ~\newline
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structbuffer_ac0609f53973010c9da41ca768e061cce}{is\+Full}} ()
+\begin{DoxyCompactList}\small\item\em Método para saber si el buffer está lleno. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structbuffer_a86e912ba7575977cbbdd314ee3fdcad0}{last\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Método para saber cual fué el último carácter introducido al arreglo del buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e}{str}} \mbox{[}\mbox{\hyperlink{structbuffer_abaf396d46305b52d2b652caa17b0c087}{size}}+1\mbox{]}
+\item 
+byte \mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{structbuffer_abaf396d46305b52d2b652caa17b0c087}{size}} = 16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Estructura que crea un buffer Es usado especialmente para controlar el input del Keypad. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{structbuffer_a519e92404291b3054f04d3247dbf9e40}\index{buffer@{buffer}!clear@{clear}}
+\index{clear@{clear}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{structbuffer_a519e92404291b3054f04d3247dbf9e40} 
+void buffer\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para limpiar el buffer ~\newline
+ 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}};\ i++)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \mbox{\hyperlink{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e}{str}}[i]\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{structbuffer_ac0609f53973010c9da41ca768e061cce}\index{buffer@{buffer}!isFull@{isFull}}
+\index{isFull@{isFull}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily \label{structbuffer_ac0609f53973010c9da41ca768e061cce} 
+bool buffer\+::is\+Full (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para saber si el buffer está lleno. 
+
+\begin{DoxyReturn}{Devuelve}
+true el buffer está lleno 
+
+false el buffer no está lleno, pero puede contener carácteres 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}\ ==\ \mbox{\hyperlink{structbuffer_abaf396d46305b52d2b652caa17b0c087}{size}};}
+\DoxyCodeLine{00057\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{structbuffer_a86e912ba7575977cbbdd314ee3fdcad0}\index{buffer@{buffer}!lastCharacter@{lastCharacter}}
+\index{lastCharacter@{lastCharacter}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{lastCharacter()}{lastCharacter()}}
+{\footnotesize\ttfamily \label{structbuffer_a86e912ba7575977cbbdd314ee3fdcad0} 
+char buffer\+::last\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para saber cual fué el último carácter introducido al arreglo del buffer. 
+
+\begin{DoxyReturn}{Devuelve}
+char Último carácter introducido 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}\ ==\ 0\ ?\ 0\ :\ \mbox{\hyperlink{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e}{str}}[\mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}\ -\/\ 1];}
+\DoxyCodeLine{00065\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{structbuffer_ad709936a1419962ee0ae78015cd89f0c}\index{buffer@{buffer}!push@{push}}
+\index{push@{push}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{structbuffer_ad709936a1419962ee0ae78015cd89f0c} 
+void buffer\+::push (\begin{DoxyParamCaption}\item[{char}]{chr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para agregar un carácter al buffer. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em chr} & carácter a agregar \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}\ ==\ \mbox{\hyperlink{structbuffer_abaf396d46305b52d2b652caa17b0c087}{size}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e}{str}}[\mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}++]\ =\ chr;}
+\DoxyCodeLine{00039\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{structbuffer_a6ede7eeacad2d34eae3393536763b997}\index{buffer@{buffer}!len@{len}}
+\index{len@{len}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily \label{structbuffer_a6ede7eeacad2d34eae3393536763b997} 
+byte buffer\+::len = 0}
+
+Variable que controla la longuitud actual del buffer \Hypertarget{structbuffer_abaf396d46305b52d2b652caa17b0c087}\index{buffer@{buffer}!size@{size}}
+\index{size@{size}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{structbuffer_abaf396d46305b52d2b652caa17b0c087} 
+const int buffer\+::size = 16\hspace{0.3cm}{\ttfamily [static]}}
+
+Tamaño máximo del buffer \Hypertarget{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e}\index{buffer@{buffer}!str@{str}}
+\index{str@{str}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily \label{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e} 
+char buffer\+::str\mbox{[}\mbox{\hyperlink{structbuffer_abaf396d46305b52d2b652caa17b0c087}{size}}+1\mbox{]}}
+
+Arreglo en el que se guarda el buffer 
+
+La documentación de esta estructura está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+sketch/\mbox{\hyperlink{variables_8h}{variables.\+h}}\end{DoxyCompactItemize}

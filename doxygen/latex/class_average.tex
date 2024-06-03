@@ -1,0 +1,454 @@
+\doxysection{Referencia de la plantilla de la clase Average\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{class_average}{}\label{class_average}\index{Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_average_a11cf0b2df3c118f7739fa25f46ff2257}{Average}} (uint32\+\_\+t size)
+\item 
+float \mbox{\hyperlink{class_average_ad9a1a6809616b2630008130ed7c6e505}{rolling}} (\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} entry)
+\item 
+void \mbox{\hyperlink{class_average_a87b0c8a75c1018121e0fed4654f64f93}{push}} (\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} entry)
+\item 
+float \mbox{\hyperlink{class_average_ac8726f71a59696e02b9a3013839507e9}{mean}} ()
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_ae0519f75076f6860c0efcba79e397c68}{mode}} ()
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_aad162a0de72da12adbe0ff2594847f46}{minimum}} ()
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_ac19088af9628449eefd2f4cebc0de0f2}{minimum}} (int \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_a623b892bfe462f0f5625290236ce50ee}{maximum}} ()
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_a624465961924ec362128db7243b33116}{maximum}} (int \texorpdfstring{$\ast$}{*})
+\item 
+float \mbox{\hyperlink{class_average_a18fd59db878a0828cf86d64ab16d2078}{stddev}} ()
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_a6f2622f34beb382cc18f3b8bb539714f}{get}} (uint32\+\_\+t)
+\item 
+void \mbox{\hyperlink{class_average_ab1ca94a64c74bdef0a413ec9e2cacf80}{least\+Squares}} (float \&m, float \&b, float \&r)
+\item 
+int \mbox{\hyperlink{class_average_a3845c6e07d3c94f6807e962ca8001443}{get\+Count}} ()
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_a02584aabf24fac59af8b165e704c14d5}{predict}} (int x)
+\item 
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average_a7c8300053d808576e178fd611a12c28d}{sum}} ()
+\item 
+void \mbox{\hyperlink{class_average_a6cafe618d1a2f6567e20f27d5414a7f4}{clear}} ()
+\item 
+\mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \& \mbox{\hyperlink{class_average_ab55825ad09272293a4e5787d8e5ddef5}{operator=}} (\mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \&a)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{class_average_a11cf0b2df3c118f7739fa25f46ff2257}\index{Average$<$ T $>$@{Average$<$ T $>$}!Average@{Average}}
+\index{Average@{Average}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Average()}{Average()}}
+{\footnotesize\ttfamily \label{class_average_a11cf0b2df3c118f7739fa25f46ff2257} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\mbox{\hyperlink{class_average}{\+::\+Average}} (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \_size\ =\ size;}
+\DoxyCodeLine{00087\ \ \ \ \ \_count\ =\ 0;}
+\DoxyCodeLine{00088\ \ \ \ \ \_store\ =\ (\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}})\ *\ size);}
+\DoxyCodeLine{00089\ \ \ \ \ \_position\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ track\ position\ for\ circular\ storage}}
+\DoxyCodeLine{00090\ \ \ \ \ \_sum\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ track\ sum\ for\ fast\ mean\ calculation}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \_store[i]\ =\ 0;}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a91c3e9722f6205ca0bd4675ea71c701d}\index{Average$<$ T $>$@{Average$<$ T $>$}!````~Average@{\texorpdfstring{$\sim$}{\string~}Average}}
+\index{````~Average@{\texorpdfstring{$\sim$}{\string~}Average}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Average()}{\string~Average()}}
+{\footnotesize\ttfamily \label{class_average_a91c3e9722f6205ca0bd4675ea71c701d} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_average}{Average}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ free(\_store);}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{class_average_a6cafe618d1a2f6567e20f27d5414a7f4}\index{Average$<$ T $>$@{Average$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_average_a6cafe618d1a2f6567e20f27d5414a7f4} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+void \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \_count\ =\ 0;}
+\DoxyCodeLine{00295\ \ \ \ \ \_sum\ =\ 0;}
+\DoxyCodeLine{00296\ \ \ \ \ \_position\ =\ 0;}
+\DoxyCodeLine{00297\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a6f2622f34beb382cc18f3b8bb539714f}\index{Average$<$ T $>$@{Average$<$ T $>$}!get@{get}}
+\index{get@{get}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_average_a6f2622f34beb382cc18f3b8bb539714f} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::get (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ \_count)\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ int32\_t\ start\ =\ \_position\ -\/\ \_count;}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordflow}{if}\ (start\ <\ 0)\ start\ +=\ \_size;}
+\DoxyCodeLine{00246\ \ \ \ \ uint32\_t\ cindex\ =\ start\ +\ index;}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}\ (cindex\ >=\ \_size)\ cindex\ -\/=\ \_size;}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordflow}{return}\ \_store[cindex];}
+\DoxyCodeLine{00249\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a3845c6e07d3c94f6807e962ca8001443}\index{Average$<$ T $>$@{Average$<$ T $>$}!getCount@{getCount}}
+\index{getCount@{getCount}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily \label{class_average_a3845c6e07d3c94f6807e962ca8001443} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+int \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::get\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ \_count;}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_ab1ca94a64c74bdef0a413ec9e2cacf80}\index{Average$<$ T $>$@{Average$<$ T $>$}!leastSquares@{leastSquares}}
+\index{leastSquares@{leastSquares}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{leastSquares()}{leastSquares()}}
+{\footnotesize\ttfamily \label{class_average_ab1ca94a64c74bdef0a413ec9e2cacf80} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+void \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::least\+Squares (\begin{DoxyParamCaption}\item[{float \&}]{m}{, }\item[{float \&}]{b}{, }\item[{float \&}]{r}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ sumx\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ sum\ of\ x\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ sumx2\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ sum\ of\ x**2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ sumxy\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ sum\ of\ x\ *\ y\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ sumy\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ sum\ of\ y\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ sumy2\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ sum\ of\ y**2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint32\_t\ i=0;i<\_count;i++)\ \ \ \{\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ sumx\ \ +=\ i;}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ sumx2\ +=\ sqr(i);\ \ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ sumxy\ +=\ i\ *\ get(i);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ sumy\ \ +=\ get(i);\ \ \ \ \ \ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ sumy2\ +=\ sqr(get(i));\ }
+\DoxyCodeLine{00264\ \ \ \ \ \}\ }
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{float}\ denom\ =\ (\_count\ *\ sumx2\ -\/\ sqr(sumx));}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (denom\ ==\ 0)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ singular\ matrix.\ can't\ solve\ the\ problem.}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ m\ =\ 0;}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ c\ =\ 0;}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ r\ =\ 0;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ m\ =\ 0\ -\/\ (\_count\ *\ sumxy\ \ -\/\ \ sumx\ *\ sumy)\ /\ denom;}
+\DoxyCodeLine{00276\ \ \ \ \ c\ =\ (sumy\ *\ sumx2\ \ -\/\ \ sumx\ *\ sumxy)\ /\ denom;}
+\DoxyCodeLine{00277\ \ \ \ \ r\ =\ (sumxy\ -\/\ sumx\ *\ sumy\ /\ \_count)\ /\ sqrt((sumx2\ -\/\ sqr(sumx)/\_count)\ *\ (sumy2\ -\/\ sqr(sumy)/\_count));}
+\DoxyCodeLine{00278\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a623b892bfe462f0f5625290236ce50ee}\index{Average$<$ T $>$@{Average$<$ T $>$}!maximum@{maximum}}
+\index{maximum@{maximum}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_average_a623b892bfe462f0f5625290236ce50ee} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::maximum (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{return}\ maximum(NULL);}
+\DoxyCodeLine{00192\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a624465961924ec362128db7243b33116}\index{Average$<$ T $>$@{Average$<$ T $>$}!maximum@{maximum}}
+\index{maximum@{maximum}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_average_a624465961924ec362128db7243b33116} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::maximum (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{index}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ maxval;}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ !=\ NULL)\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ *index\ =\ 0;}
+\DoxyCodeLine{00199\ \ \ \ \ \}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_count\ ==\ 0)\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00203\ \ \ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ maxval\ =\ get(0);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{for}(uint32\_t\ i\ =\ 0;\ i\ <\ \_count;\ i++)\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(get(i)\ >\ maxval)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ maxval\ =\ get(i);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ !=\ NULL)\ \{\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *index\ =\ i;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{return}\ maxval;}
+\DoxyCodeLine{00216\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_ac8726f71a59696e02b9a3013839507e9}\index{Average$<$ T $>$@{Average$<$ T $>$}!mean@{mean}}
+\index{mean@{mean}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mean()}{mean()}}
+{\footnotesize\ttfamily \label{class_average_ac8726f71a59696e02b9a3013839507e9} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+float \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::mean (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_count\ ==\ 0)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{return}\ ((\textcolor{keywordtype}{float})\_sum\ /\ (\textcolor{keywordtype}{float})\_count);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ mean\ calculation\ based\ on\ \_sum}}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_aad162a0de72da12adbe0ff2594847f46}\index{Average$<$ T $>$@{Average$<$ T $>$}!minimum@{minimum}}
+\index{minimum@{minimum}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_average_aad162a0de72da12adbe0ff2594847f46} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::minimum (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{return}\ minimum(NULL);}
+\DoxyCodeLine{00164\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_ac19088af9628449eefd2f4cebc0de0f2}\index{Average$<$ T $>$@{Average$<$ T $>$}!minimum@{minimum}}
+\index{minimum@{minimum}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_average_ac19088af9628449eefd2f4cebc0de0f2} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::minimum (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{index}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ minval;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ !=\ NULL)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ *index\ =\ 0;}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_count\ ==\ 0)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ minval\ =\ get(0);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{for}(uint32\_t\ i\ =\ 0;\ i\ <\ \_count;\ i++)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(get(i)\ <\ minval)\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ minval\ =\ get(i);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ !=\ NULL)\ \{\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *index\ =\ i;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ minval;}
+\DoxyCodeLine{00188\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_ae0519f75076f6860c0efcba79e397c68}\index{Average$<$ T $>$@{Average$<$ T $>$}!mode@{mode}}
+\index{mode@{mode}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mode()}{mode()}}
+{\footnotesize\ttfamily \label{class_average_ae0519f75076f6860c0efcba79e397c68} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ uint32\_t\ pos;}
+\DoxyCodeLine{00127\ \ \ \ \ uint32\_t\ inner;}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ most;}
+\DoxyCodeLine{00129\ \ \ \ \ uint32\_t\ mostcount;}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ current;}
+\DoxyCodeLine{00131\ \ \ \ \ uint32\_t\ currentcount;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_count\ ==\ 0)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ most\ =\ get(0);}
+\DoxyCodeLine{00138\ \ \ \ \ mostcount\ =\ 1;}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{for}(pos\ =\ 0;\ pos\ <\ \_count;\ pos++)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ current\ =\ get(pos);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ currentcount\ =\ 1;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(inner\ =\ pos\ +\ 1;\ inner\ <\ \_count;\ inner++)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(get(inner)\ ==\ current)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentcount++;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(currentcount\ >\ mostcount)\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ most\ =\ current;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ mostcount\ =\ currentcount;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ we\ have\ less\ array\ slices\ left\ than\ the\ current}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ maximum\ count,\ then\ there\ is\ no\ room\ left\ to\ find}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ bigger\ count.\ \ We\ have\ finished\ early\ and\ we\ can}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ go\ home.}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_count\ -\/\ pos\ <\ mostcount)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{return}\ most;}
+\DoxyCodeLine{00160\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_ab55825ad09272293a4e5787d8e5ddef5}\index{Average$<$ T $>$@{Average$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_average_ab55825ad09272293a4e5787d8e5ddef5} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \& \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \&}]{a}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ clear();}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_size;\ i++)\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ push(a.get(i));}
+\DoxyCodeLine{00303\ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00305\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a02584aabf24fac59af8b165e704c14d5}\index{Average$<$ T $>$@{Average$<$ T $>$}!predict@{predict}}
+\index{predict@{predict}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily \label{class_average_a02584aabf24fac59af8b165e704c14d5} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::predict (\begin{DoxyParamCaption}\item[{int}]{x}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordtype}{float}\ m,\ c,\ r;}
+\DoxyCodeLine{00282\ \ \ \ \ leastSquares(m,\ c,\ r);\ \textcolor{comment}{//\ y\ =\ mx\ +\ c;}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ y\ =\ m\ *\ x\ +\ c;}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordflow}{return}\ y;}
+\DoxyCodeLine{00286\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a87b0c8a75c1018121e0fed4654f64f93}\index{Average$<$ T $>$@{Average$<$ T $>$}!push@{push}}
+\index{push@{push}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{class_average_a87b0c8a75c1018121e0fed4654f64f93} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+void \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}}]{entry}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_count\ <\ \_size)\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ adding\ new\ values\ to\ array}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \_count++;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ count\ number\ of\ values\ in\ array}}
+\DoxyCodeLine{00103\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ overwriting\ old\ values}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \_sum\ =\ \_sum\ -\/\_store[\_position];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ remove\ old\ value\ from\ \_sum}}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \_store[\_position]\ =\ entry;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ new\ value\ in\ array}}
+\DoxyCodeLine{00107\ \ \ \ \ \_sum\ +=\ entry;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ add\ the\ new\ value\ to\ \_sum}}
+\DoxyCodeLine{00108\ \ \ \ \ \_position\ +=\ 1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ increment\ the\ position\ counter}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_position\ >=\ \_size)\ \_position\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ loop\ the\ position\ counter}}
+\DoxyCodeLine{00110\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_ad9a1a6809616b2630008130ed7c6e505}\index{Average$<$ T $>$@{Average$<$ T $>$}!rolling@{rolling}}
+\index{rolling@{rolling}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rolling()}{rolling()}}
+{\footnotesize\ttfamily \label{class_average_ad9a1a6809616b2630008130ed7c6e505} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+float \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::rolling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}}]{entry}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ push(entry);}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{return}\ mean();}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a18fd59db878a0828cf86d64ab16d2078}\index{Average$<$ T $>$@{Average$<$ T $>$}!stddev@{stddev}}
+\index{stddev@{stddev}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{stddev()}{stddev()}}
+{\footnotesize\ttfamily \label{class_average_a18fd59db878a0828cf86d64ab16d2078} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+float \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::stddev (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{float}\ square;}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{float}\ sum;}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{float}\ mu;}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordtype}{float}\ theta;}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_count\ ==\ 0)\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00226\ \ \ \ \ \}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ mu\ =\ mean();}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ sum\ =\ 0;}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{for}(uint32\_t\ i\ =\ 0;\ i\ <\ \_count;\ i++)\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ theta\ =\ mu\ -\/\ (float)get(i);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ square\ =\ theta\ *\ theta;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ sum\ +=\ square;}
+\DoxyCodeLine{00235\ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{return}\ sqrt(sum/(\textcolor{keywordtype}{float})\_count);}
+\DoxyCodeLine{00237\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_average_a7c8300053d808576e178fd611a12c28d}\index{Average$<$ T $>$@{Average$<$ T $>$}!sum@{sum}}
+\index{sum@{sum}!Average$<$ T $>$@{Average$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily \label{class_average_a7c8300053d808576e178fd611a12c28d} 
+template$<$class \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \mbox{\hyperlink{class_average}{Average}}$<$ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$\+::sum (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{return}\ \_sum;}
+\DoxyCodeLine{00291\ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+sketch/Average.\+h\end{DoxyCompactItemize}

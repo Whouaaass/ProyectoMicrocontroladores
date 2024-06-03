@@ -1,0 +1,53 @@
+\doxysection{Button.\+h}
+\hypertarget{_button_8h_source}{}\label{_button_8h_source}\index{sketch/Button.h@{sketch/Button.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_button}{Button}}\ \{}
+\DoxyCodeLine{00004\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{class_button}{Button}}\ (uint8\_t\ pin,\ \textcolor{keywordtype}{bool}\ pullup\ =\ \textcolor{keyword}{false},\ uint16\_t\ debounceDelay\ =\ 50)}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ :\ \_pin(pin),\ \_state(LOW),\ \_lastState(LOW),}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \_lastMillis(0),\ \_debounceDelay(debounceDelay),}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \_lastDebounceTime(0)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pullup\ ==\ \textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ pinMode(\_pin,\ INPUT\_PULLUP);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ pinMode(\_pin,\ INPUT);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Debounces\ the\ button\ and\ returns\ the\ state\ if\ it\ was\ just\ changed.}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ check(\textcolor{keywordtype}{bool}\ triggerState\ =\ LOW)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ reading\ =\ digitalRead(\_pin);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ the\ buttons\ has\ changed\ state}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reading\ !=\ \_lastState)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \_lastDebounceTime\ =\ millis();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ the\ buttons\ hasn't\ changed\ state\ for\ '\_debounceDelay'\ milliseconds.}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((millis()\ -\/\ \_lastDebounceTime)\ >\ \_debounceDelay)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ if\ the\ buttons\ has\ changed\ state}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reading\ !=\ \_state)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_state\ =\ reading;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_state;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_lastState\ =\ reading;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ this\ code\ is\ reached,\ it\ returns\ the\ normal\ state\ of\ the\ button.}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (triggerState\ ==\ HIGH)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ LOW;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ HIGH;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ \_pin;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_state;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_lastState;}
+\DoxyCodeLine{00044\ \ \ \ \ uint32\_t\ \_lastMillis;}
+\DoxyCodeLine{00045\ \ \ \ \ uint16\_t\ \_debounceDelay;}
+\DoxyCodeLine{00046\ \ \ \ \ uint32\_t\ \_lastDebounceTime;}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

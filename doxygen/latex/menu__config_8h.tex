@@ -1,0 +1,136 @@
+\doxysection{Referencia del archivo sketch/menu\+\_\+config.h}
+\hypertarget{menu__config_8h}{}\label{menu__config_8h}\index{sketch/menu\_config.h@{sketch/menu\_config.h}}
+
+
+Header configuración del Menu instancia de Liquid\+Menu.  
+
+
+{\ttfamily \#include $<$Liquid\+Menu.\+h$>$}\newline
+{\ttfamily \#include "{}variables.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu__config_8h_ae7a75cafc17b0c9abb50b0f70c96200e}{blank\+Function}} ()
+\item 
+\Hypertarget{menu__config_8h_aa5493526724447712a331317712986b2}\label{menu__config_8h_aa5493526724447712a331317712986b2} 
+Liquid\+Line {\bfseries line\+\_\+tmp\+\_\+high} (0, 0, "{}TEMP\+\_\+\+HIGH\+:"{}, tmp\+\_\+high)
+\item 
+\Hypertarget{menu__config_8h_a93975d9419efb2dfa7600dfe1ab45bae}\label{menu__config_8h_a93975d9419efb2dfa7600dfe1ab45bae} 
+Liquid\+Line {\bfseries line\+\_\+tmp\+\_\+low} (0, 1, "{}TEMP\+\_\+\+LOW\+: "{}, tmp\+\_\+low)
+\item 
+\Hypertarget{menu__config_8h_a2ddde6fbae9a10846c064016a1aa5dc6}\label{menu__config_8h_a2ddde6fbae9a10846c064016a1aa5dc6} 
+Liquid\+Line {\bfseries line\+\_\+luz\+\_\+high} (0, 1, "{}LUZ\+\_\+\+HIGH\+: "{}, luz\+\_\+high)
+\item 
+\Hypertarget{menu__config_8h_a59deb71d862e86369c38c8657353557b}\label{menu__config_8h_a59deb71d862e86369c38c8657353557b} 
+Liquid\+Line {\bfseries line\+\_\+luz\+\_\+low} (0, 1, "{}LUZ\+\_\+\+LOW\+:  "{}, luz\+\_\+low)
+\item 
+\Hypertarget{menu__config_8h_a115e074799d262c24a9118c66de4a70c}\label{menu__config_8h_a115e074799d262c24a9118c66de4a70c} 
+Liquid\+Line {\bfseries line\+\_\+hall} (0, 1, "{}HALL\+:     "{}, hall\+\_\+high)
+\item 
+\Hypertarget{menu__config_8h_af4a44d0db81e257d35e5422ac0a439c0}\label{menu__config_8h_af4a44d0db81e257d35e5422ac0a439c0} 
+Liquid\+Line {\bfseries line\+\_\+reset} (0, 1, "{}RESET"{})
+\item 
+\Hypertarget{menu__config_8h_acb956f4a8c977d3649baea12d19f14af}\label{menu__config_8h_acb956f4a8c977d3649baea12d19f14af} 
+Liquid\+Line {\bfseries status\+\_\+tmp\+\_\+m} (0, 0, "{}Luz\+:"{}, \mbox{\hyperlink{variables_8h_aaf44627cece33230927de497de0bacff}{L}})
+\item 
+\Hypertarget{menu__config_8h_a4f948e0f0a956765dfa51234e7549960}\label{menu__config_8h_a4f948e0f0a956765dfa51234e7549960} 
+Liquid\+Line {\bfseries status\+\_\+hum\+\_\+m} (8, 0, "{}Hum\+:"{}, \mbox{\hyperlink{variables_8h_aa0ea3ded3c50bfac27272faf98c97914}{H}}, "{}\%"{})
+\item 
+\Hypertarget{menu__config_8h_a99d29b9a99f9e4f0d6dcaa96fb118503}\label{menu__config_8h_a99d29b9a99f9e4f0d6dcaa96fb118503} 
+Liquid\+Line {\bfseries status\+\_\+luz\+\_\+m} (0, 1, "{}Temp\+:"{}, \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}, "{}C"{})
+\item 
+\Hypertarget{menu__config_8h_a9a406ab5124574a67e4764f0fdaf0b76}\label{menu__config_8h_a9a406ab5124574a67e4764f0fdaf0b76} 
+Liquid\+Screen {\bfseries scrn\+\_\+monitoreo\+\_\+ambiental} (status\+\_\+tmp\+\_\+m, status\+\_\+hum\+\_\+m, status\+\_\+luz\+\_\+m)
+\item 
+\Hypertarget{menu__config_8h_a5b3b0e9addb6edeabdc50e0c12ee3c6c}\label{menu__config_8h_a5b3b0e9addb6edeabdc50e0c12ee3c6c} 
+Liquid\+Line {\bfseries status\+\_\+hall\+\_\+m} (0, 0, "{}Hall\+:"{}, \mbox{\hyperlink{variables_8h_a3897e797a2180abe61c32c296276adc6}{HALL}})
+\item 
+\Hypertarget{menu__config_8h_ab78bd1a7d64f7f1d0c4c6a8b7365fff4}\label{menu__config_8h_ab78bd1a7d64f7f1d0c4c6a8b7365fff4} 
+Liquid\+Screen {\bfseries scrn\+\_\+monitoreo\+\_\+eventos} (status\+\_\+hall\+\_\+m)
+\item 
+\Hypertarget{menu__config_8h_a06ab17b17967c89a1552279534c60cab}\label{menu__config_8h_a06ab17b17967c89a1552279534c60cab} 
+Liquid\+Line {\bfseries line\+\_\+alarma} (0, 0, "{}Precaucion"{})
+\item 
+\Hypertarget{menu__config_8h_a6585baad9f26a1c34da77c4d11e99610}\label{menu__config_8h_a6585baad9f26a1c34da77c4d11e99610} 
+Liquid\+Line {\bfseries status\+\_\+alarma} (0, 1, message\+Alarma)
+\item 
+\Hypertarget{menu__config_8h_ab097415ad716968c315c135c0208c35b}\label{menu__config_8h_ab097415ad716968c315c135c0208c35b} 
+Liquid\+Screen {\bfseries scrn\+\_\+alarma} (line\+\_\+alarma, status\+\_\+alarma)
+\item 
+\Hypertarget{menu__config_8h_a9da5673cc92c9e5ca2651082044b071a}\label{menu__config_8h_a9da5673cc92c9e5ca2651082044b071a} 
+Liquid\+Menu {\bfseries main\+Menu} (\mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}})
+\item 
+void \mbox{\hyperlink{menu__config_8h_a4c8aff720db898c3dc82feb6481067c5}{setup\+Liquid\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Función que inicializa la configuración del menu de la librería Liquid\+Menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{menu__config_8h_a96768a872b2d1e456f171f7fa35a9f8b}\label{menu__config_8h_a96768a872b2d1e456f171f7fa35a9f8b} 
+Liquid\+Screen {\bfseries scrn\+\_\+config}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Header configuración del Menu instancia de Liquid\+Menu. 
+
+\begin{DoxyAuthor}{Autor}
+frdy 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2024-\/06-\/02
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{menu__config_8h_ae7a75cafc17b0c9abb50b0f70c96200e}\index{menu\_config.h@{menu\_config.h}!blankFunction@{blankFunction}}
+\index{blankFunction@{blankFunction}!menu\_config.h@{menu\_config.h}}
+\doxysubsubsection{\texorpdfstring{blankFunction()}{blankFunction()}}
+{\footnotesize\ttfamily \label{menu__config_8h_ae7a75cafc17b0c9abb50b0f70c96200e} 
+void blank\+Function (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{\ \textcolor{keywordflow}{return};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{menu__config_8h_a4c8aff720db898c3dc82feb6481067c5}\index{menu\_config.h@{menu\_config.h}!setupLiquidMenu@{setupLiquidMenu}}
+\index{setupLiquidMenu@{setupLiquidMenu}!menu\_config.h@{menu\_config.h}}
+\doxysubsubsection{\texorpdfstring{setupLiquidMenu()}{setupLiquidMenu()}}
+{\footnotesize\ttfamily \label{menu__config_8h_a4c8aff720db898c3dc82feb6481067c5} 
+void setup\+Liquid\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Función que inicializa la configuración del menu de la librería Liquid\+Menu. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ scrn\_config.add\_line(line\_tmp\_high);}
+\DoxyCodeLine{00052\ \ \ scrn\_config.add\_line(line\_tmp\_low);}
+\DoxyCodeLine{00053\ \ \ scrn\_config.add\_line(line\_luz\_high);}
+\DoxyCodeLine{00054\ \ \ scrn\_config.add\_line(line\_luz\_low);}
+\DoxyCodeLine{00055\ \ \ scrn\_config.add\_line(line\_hall);}
+\DoxyCodeLine{00056\ \ \ scrn\_config.add\_line(line\_reset);}
+\DoxyCodeLine{00057\ \ \ line\_tmp\_high.attach\_function(1,\ blankFunction);}
+\DoxyCodeLine{00058\ \ \ line\_tmp\_low.attach\_function(1,\ blankFunction);}
+\DoxyCodeLine{00059\ \ \ line\_luz\_high.attach\_function(1,\ blankFunction);}
+\DoxyCodeLine{00060\ \ \ line\_luz\_low.attach\_function(1,\ blankFunction);}
+\DoxyCodeLine{00061\ \ \ line\_hall.attach\_function(1,\ blankFunction);}
+\DoxyCodeLine{00062\ \ \ line\_reset.attach\_function(1,\ blankFunction);}
+\DoxyCodeLine{00063\ \ \ line\_tmp\_high.set\_decimalPlaces(1);}
+\DoxyCodeLine{00064\ \ \ line\_tmp\_low.set\_decimalPlaces(1);}
+\DoxyCodeLine{00065\ \ \ scrn\_config.set\_displayLineCount(2);}
+\DoxyCodeLine{00066\ \ \ mainMenu.add\_screen(scrn\_config);}
+\DoxyCodeLine{00067\ \ \ mainMenu.add\_screen(scrn\_monitoreo\_eventos);}
+\DoxyCodeLine{00068\ \ \ mainMenu.add\_screen(scrn\_monitoreo\_ambiental);}
+\DoxyCodeLine{00069\ \ \ mainMenu.add\_screen(scrn\_alarma);}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}

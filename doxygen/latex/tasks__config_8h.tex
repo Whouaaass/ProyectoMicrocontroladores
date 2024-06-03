@@ -1,0 +1,217 @@
+\doxysection{Referencia del archivo sketch/tasks\+\_\+config.h}
+\hypertarget{tasks__config_8h}{}\label{tasks__config_8h}\index{sketch/tasks\_config.h@{sketch/tasks\_config.h}}
+
+
+Archivo de configuración de las tareas asincrónicas.  
+
+
+{\ttfamily \#include "{}Async\+Task\+Lib.\+h"{}}\newline
+{\ttfamily \#include "{}variables.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+\_\+config.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tasks__config_8h_a5f7357072c717da529f2fd7084cc3dd0}{control\+Temperatura}} ()
+\begin{DoxyCompactList}\small\item\em función que actualiza el valor de la temperatura \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks__config_8h_a9c3ea79d8cc85be8af63717123d71143}{control\+Humedad}} ()
+\begin{DoxyCompactList}\small\item\em función que actualiza el valor la humedad \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks__config_8h_a959ddecdcd9553e1d28618ad7d9e3312}{control\+Luz}} ()
+\begin{DoxyCompactList}\small\item\em función que actualiza el valor del sensor fotoresistor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks__config_8h_a9cd0f9ab2a6d5b3bd06d6140aa829a1d}{control\+Hall}} ()
+\begin{DoxyCompactList}\small\item\em función que actualiza el valor del sensor hall \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks__config_8h_a72584877eb33caa4953ca9997ff64abc}{on\+Seguridad\+AFK}} ()
+\begin{DoxyCompactList}\small\item\em función que define el comportamiento cuando el usuario pasa tiempo sin interactuar con el sistema de seguridad \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks__config_8h_ad862998466057175c32fa0007c760390}{input\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em función auxiliar para poner el valor de entrada de Timeout en la variable "{}input"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tasks__config_8h_add92fe5f33c4d60f4d096e30d98efa4b}{on\+Update\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em función que actualiza el menú instanciado de la librería Liquid\+Menu \end{DoxyCompactList}\item 
+\Hypertarget{tasks__config_8h_ab5f6fda433e3c3ce8ca6a5307f59ba9c}\label{tasks__config_8h_ab5f6fda433e3c3ce8ca6a5307f59ba9c} 
+Async\+Task {\bfseries task\+Update\+Menu} (1000, true, \mbox{\hyperlink{tasks__config_8h_add92fe5f33c4d60f4d096e30d98efa4b}{on\+Update\+Menu}})
+\item 
+\Hypertarget{tasks__config_8h_a17f815657b02e1ac9243e4f53b8d930c}\label{tasks__config_8h_a17f815657b02e1ac9243e4f53b8d930c} 
+Async\+Task {\bfseries task\+Temperatura} (1000, true, \mbox{\hyperlink{tasks__config_8h_a5f7357072c717da529f2fd7084cc3dd0}{control\+Temperatura}})
+\item 
+\Hypertarget{tasks__config_8h_aecab95e90892492eea20992a1c8821e4}\label{tasks__config_8h_aecab95e90892492eea20992a1c8821e4} 
+Async\+Task {\bfseries task\+Humedad} (1000, true, \mbox{\hyperlink{tasks__config_8h_a9c3ea79d8cc85be8af63717123d71143}{control\+Humedad}})
+\item 
+\Hypertarget{tasks__config_8h_a8db1ee70703091bb7616eefc53a15607}\label{tasks__config_8h_a8db1ee70703091bb7616eefc53a15607} 
+Async\+Task {\bfseries task\+Luz} (1000, true, \mbox{\hyperlink{tasks__config_8h_a959ddecdcd9553e1d28618ad7d9e3312}{control\+Luz}})
+\item 
+\Hypertarget{tasks__config_8h_a63087f94f3610975563109bda4608665}\label{tasks__config_8h_a63087f94f3610975563109bda4608665} 
+Async\+Task {\bfseries task\+Hall} (1000, true, \mbox{\hyperlink{tasks__config_8h_a9cd0f9ab2a6d5b3bd06d6140aa829a1d}{control\+Hall}})
+\item 
+\Hypertarget{tasks__config_8h_a435c035b00b962afb2905c72bad043f0}\label{tasks__config_8h_a435c035b00b962afb2905c72bad043f0} 
+Async\+Task {\bfseries task\+Timeout\+Eventos} (3000, false, \mbox{\hyperlink{tasks__config_8h_ad862998466057175c32fa0007c760390}{input\+Timeout}})
+\item 
+\Hypertarget{tasks__config_8h_ace77b6b08ea40f2bf828fb56324e098d}\label{tasks__config_8h_ace77b6b08ea40f2bf828fb56324e098d} 
+Async\+Task {\bfseries task\+Timeout\+Ambiental} (7000, false, \mbox{\hyperlink{tasks__config_8h_ad862998466057175c32fa0007c760390}{input\+Timeout}})
+\item 
+\Hypertarget{tasks__config_8h_a695932bfbe50fdd29a602c479e37e397}\label{tasks__config_8h_a695932bfbe50fdd29a602c479e37e397} 
+Async\+Task {\bfseries task\+Timeout\+Alarma} (4000, false, \mbox{\hyperlink{tasks__config_8h_ad862998466057175c32fa0007c760390}{input\+Timeout}})
+\item 
+\Hypertarget{tasks__config_8h_a2dc445c265b76515c688a68e5c07362c}\label{tasks__config_8h_a2dc445c265b76515c688a68e5c07362c} 
+Async\+Task {\bfseries task\+Timeout\+Inicio\+AFK} (7000, false, \mbox{\hyperlink{tasks__config_8h_a72584877eb33caa4953ca9997ff64abc}{on\+Seguridad\+AFK}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Archivo de configuración de las tareas asincrónicas. 
+
+\begin{DoxyAuthor}{Autor}
+frdy 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2024-\/06-\/02
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{tasks__config_8h_a9cd0f9ab2a6d5b3bd06d6140aa829a1d}\index{tasks\_config.h@{tasks\_config.h}!controlHall@{controlHall}}
+\index{controlHall@{controlHall}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{controlHall()}{controlHall()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_a9cd0f9ab2a6d5b3bd06d6140aa829a1d} 
+void control\+Hall (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que actualiza el valor del sensor hall 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \mbox{\hyperlink{variables_8h_a3897e797a2180abe61c32c296276adc6}{HALL}}\ =\ hall.rolling(analogRead(HALL\_PIN));}
+\DoxyCodeLine{00090\ \ \ \textcolor{comment}{//mainMenu.update();}}
+\DoxyCodeLine{00091\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{variables_8h_a3897e797a2180abe61c32c296276adc6}{HALL}}\ >\ hall\_high)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ strcpy(messageAlarma,\ \textcolor{stringliteral}{"{}Hay\ Iman"{}});}
+\DoxyCodeLine{00093\ \ \ \ \ input\ =\ Input::Umbral;}
+\DoxyCodeLine{00094\ \ \ \}}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{tasks__config_8h_a9c3ea79d8cc85be8af63717123d71143}\index{tasks\_config.h@{tasks\_config.h}!controlHumedad@{controlHumedad}}
+\index{controlHumedad@{controlHumedad}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{controlHumedad()}{controlHumedad()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_a9c3ea79d8cc85be8af63717123d71143} 
+void control\+Humedad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que actualiza el valor la humedad 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{variables_8h_aa0ea3ded3c50bfac27272faf98c97914}{H}}\ =\ humedad.rolling(\mbox{\hyperlink{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787}{dht}}.readHumidity());}
+\DoxyCodeLine{00076\ \ \ \textcolor{comment}{//mainMenu.update();}}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+\Hypertarget{tasks__config_8h_a959ddecdcd9553e1d28618ad7d9e3312}\index{tasks\_config.h@{tasks\_config.h}!controlLuz@{controlLuz}}
+\index{controlLuz@{controlLuz}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{controlLuz()}{controlLuz()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_a959ddecdcd9553e1d28618ad7d9e3312} 
+void control\+Luz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que actualiza el valor del sensor fotoresistor 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \mbox{\hyperlink{variables_8h_aaf44627cece33230927de497de0bacff}{L}}\ =\ luz.rolling(analogRead(PHOTOCELL\_PIN));}
+\DoxyCodeLine{00081\ \ \ \textcolor{comment}{//mainMenu.update();}}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{variables_8h_aaf44627cece33230927de497de0bacff}{L}}\ >\ luz\_high)\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ strcpy(messageAlarma,\ \textcolor{stringliteral}{"{}'Ta\ Oscuro"{}});}
+\DoxyCodeLine{00084\ \ \ \ \ input\ =\ Input::Umbral;}
+\DoxyCodeLine{00085\ \ \ \}}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\Hypertarget{tasks__config_8h_a5f7357072c717da529f2fd7084cc3dd0}\index{tasks\_config.h@{tasks\_config.h}!controlTemperatura@{controlTemperatura}}
+\index{controlTemperatura@{controlTemperatura}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{controlTemperatura()}{controlTemperatura()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_a5f7357072c717da529f2fd7084cc3dd0} 
+void control\+Temperatura (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que actualiza el valor de la temperatura 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ =\ temperatura.rolling(\mbox{\hyperlink{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787}{dht}}.readTemperature());}
+\DoxyCodeLine{00067\ \ \ \textcolor{comment}{//mainMenu.update();}}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}\ >\ tmp\_high)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ strcpy(messageAlarma,\ \textcolor{stringliteral}{"{}'Ta\ Caliente"{}});}
+\DoxyCodeLine{00070\ \ \ \ \ input\ =\ Input::Umbral;}
+\DoxyCodeLine{00071\ \ \ \}}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+\Hypertarget{tasks__config_8h_ad862998466057175c32fa0007c760390}\index{tasks\_config.h@{tasks\_config.h}!inputTimeout@{inputTimeout}}
+\index{inputTimeout@{inputTimeout}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{inputTimeout()}{inputTimeout()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_ad862998466057175c32fa0007c760390} 
+void input\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función auxiliar para poner el valor de entrada de Timeout en la variable "{}input"{} 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ input\ =\ Timeout;}
+\DoxyCodeLine{00111\ \}}
+
+\end{DoxyCode}
+\Hypertarget{tasks__config_8h_a72584877eb33caa4953ca9997ff64abc}\index{tasks\_config.h@{tasks\_config.h}!onSeguridadAFK@{onSeguridadAFK}}
+\index{onSeguridadAFK@{onSeguridadAFK}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{onSeguridadAFK()}{onSeguridadAFK()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_a72584877eb33caa4953ca9997ff64abc} 
+void on\+Seguridad\+AFK (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que define el comportamiento cuando el usuario pasa tiempo sin interactuar con el sistema de seguridad 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ -\/-\/password\_attempts;\ \ }
+\DoxyCodeLine{00099\ \ \ keypadBuffer.\mbox{\hyperlink{structbuffer_a519e92404291b3054f04d3247dbf9e40}{clear}}();}
+\DoxyCodeLine{00100\ \ \ setLED(1,\ 1,\ 0);\ \ }
+\DoxyCodeLine{00101\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.clear();}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Incorrecto"{}});}
+\DoxyCodeLine{00103\ \ \ delay(1000);}
+\DoxyCodeLine{00104\ \ \ setLED(0,\ 0,\ 0);\ \ }
+\DoxyCodeLine{00105\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.clear();}
+\DoxyCodeLine{00106\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Clave:\ "{}});\ \ }
+\DoxyCodeLine{00107\ \}}
+
+\end{DoxyCode}
+\Hypertarget{tasks__config_8h_add92fe5f33c4d60f4d096e30d98efa4b}\index{tasks\_config.h@{tasks\_config.h}!onUpdateMenu@{onUpdateMenu}}
+\index{onUpdateMenu@{onUpdateMenu}!tasks\_config.h@{tasks\_config.h}}
+\doxysubsubsection{\texorpdfstring{onUpdateMenu()}{onUpdateMenu()}}
+{\footnotesize\ttfamily \label{tasks__config_8h_add92fe5f33c4d60f4d096e30d98efa4b} 
+void on\+Update\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que actualiza el menú instanciado de la librería Liquid\+Menu 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ mainMenu.update();}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
