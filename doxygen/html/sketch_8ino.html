@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProyectoMicrocontroladores: Referencia del archivo sketch/sketch.ino</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">ProyectoMicrocontroladores
+   </div>
+   <div id="projectbrief">Proyecto de materia con el objetivo de crear una aplicación que pueda manejar microcontroladores a través de arduino</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e80fe89702e8e9e35bb1f7e9386fe61f.html">sketch</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo sketch.ino</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Archivo principal del proyecto.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="variables_8h_source.html">variables.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
+<code>#include &quot;Average.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="melody_8h_source.html">melody.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_s_m__config_8h_source.html">SM_config.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a2c018b07f320da4371811bb498b61a82" id="r_a2c018b07f320da4371811bb498b61a82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c018b07f320da4371811bb498b61a82">seguridad</a> ()</td></tr>
+<tr class="memdesc:a2c018b07f320da4371811bb498b61a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que maneja la seguridad del estado de la maquina "Inicio" Pide una contraseña y verifica si es correcta; también maneja el número de intentos y la consideración de que el usuario deje la contraseña incompleta  <br /></td></tr>
+<tr class="separator:a2c018b07f320da4371811bb498b61a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0e843767aeea4f433a28b9c54f573a" id="r_a2a0e843767aeea4f433a28b9c54f573a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a0e843767aeea4f433a28b9c54f573a">menu</a> ()</td></tr>
+<tr class="memdesc:a2a0e843767aeea4f433a28b9c54f573a"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que maneja el menú del estado de la máquina "Config" Muestra un menú en el que se pueden configurar las variables que ponen los límites cuando se alcanza un registro "peligroso"  <br /></td></tr>
+<tr class="separator:a2a0e843767aeea4f433a28b9c54f573a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867f6fabc108b3a4c6f0dade802e3a8a" id="r_a867f6fabc108b3a4c6f0dade802e3a8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a867f6fabc108b3a4c6f0dade802e3a8a">bloqueo</a> ()</td></tr>
+<tr class="memdesc:a867f6fabc108b3a4c6f0dade802e3a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que maneja el estado de la máquina "Bloqueado" Muestra el comportamiento cuando el sistema está bloqueado  <br /></td></tr>
+<tr class="separator:a867f6fabc108b3a4c6f0dade802e3a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9ee76c563085f0c7551b4f5af30adf8" id="r_ad9ee76c563085f0c7551b4f5af30adf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9ee76c563085f0c7551b4f5af30adf8">alarma</a> ()</td></tr>
+<tr class="memdesc:ad9ee76c563085f0c7551b4f5af30adf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que maneja el estado de la máquina "Alarma" Muestra el mensaje de precaución con el sonido que se hace cuando un monitoreo encuentra una lectura "alta"  <br /></td></tr>
+<tr class="separator:ad9ee76c563085f0c7551b4f5af30adf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310667cc50f973b5ea8f3dda40239571" id="r_a310667cc50f973b5ea8f3dda40239571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310667cc50f973b5ea8f3dda40239571">monitoreoAmbiental</a> ()</td></tr>
+<tr class="memdesc:a310667cc50f973b5ea8f3dda40239571"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que maneja el estado de la máquina "MonitoreoEventos" Monitorea el sensor de HALL  <br /></td></tr>
+<tr class="separator:a310667cc50f973b5ea8f3dda40239571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304e93b3b720a71793e50ef1da42d219" id="r_a304e93b3b720a71793e50ef1da42d219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a304e93b3b720a71793e50ef1da42d219">monitoreoEventos</a> ()</td></tr>
+<tr class="memdesc:a304e93b3b720a71793e50ef1da42d219"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que maneja el estado de la máquina "MonitoreoAmbiental" Monitorea los sensores de luz, temperatura y humedad*  <br /></td></tr>
+<tr class="separator:a304e93b3b720a71793e50ef1da42d219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac989da866a73e4a9b5bb3da32f8ada7a" id="r_ac989da866a73e4a9b5bb3da32f8ada7a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> &gt; </td></tr>
+<tr class="memitem:ac989da866a73e4a9b5bb3da32f8ada7a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl</a> (<a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> *variable, <a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> step, char key, <a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> lower_limit, <a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> upper_limit)</td></tr>
+<tr class="memdesc:ac989da866a73e4a9b5bb3da32f8ada7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">función que permite cambiar una variable a un paso determinado a través de un caracter utilizado <br  />
+es usada para cambiar el valor de las variables en configuración  <br /></td></tr>
+<tr class="separator:ac989da866a73e4a9b5bb3da32f8ada7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d" id="r_a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
+<tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe461d27b9c48d5921c00d521181f12f" id="r_afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Archivo principal del proyecto. </p>
+<p>(Main File) </p><dl class="section author"><dt>Autor</dt><dd>Fredy Anaya </dd>
+<dd>
+Jorge Mera </dd>
+<dd>
+David Chacón </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2024-06-02</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
+</div><h2 class="groupheader">Documentación de funciones</h2>
+<a id="ad9ee76c563085f0c7551b4f5af30adf8" name="ad9ee76c563085f0c7551b4f5af30adf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9ee76c563085f0c7551b4f5af30adf8">&#9670;&#160;</a></span>alarma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alarma </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que maneja el estado de la máquina "Alarma" Muestra el mensaje de precaución con el sonido que se hace cuando un monitoreo encuentra una lectura "alta" </p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>              {</div>
+<div class="line"><span class="lineno">  155</span>  taskTimeoutAlarma.Update();</div>
+<div class="line"><span class="lineno">  156</span>  taskTemperatura.Update();</div>
+<div class="line"><span class="lineno">  157</span>  taskHumedad.Update();</div>
+<div class="line"><span class="lineno">  158</span>  taskLuz.Update();</div>
+<div class="line"><span class="lineno">  159</span>  taskHall.Update();</div>
+<div class="line"><span class="lineno">  160</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="micro__config_8h.html#a70e4443e59fd7b34fac6fe6f54d97d5e">button</a>.check() == LOW) input = Input::BotonPresionado;</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+<div class="ttc" id="amicro__config_8h_html_a70e4443e59fd7b34fac6fe6f54d97d5e"><div class="ttname"><a href="micro__config_8h.html#a70e4443e59fd7b34fac6fe6f54d97d5e">button</a></div><div class="ttdeci">Button button(BUTTON_PIN, true)</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a867f6fabc108b3a4c6f0dade802e3a8a" name="a867f6fabc108b3a4c6f0dade802e3a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a867f6fabc108b3a4c6f0dade802e3a8a">&#9670;&#160;</a></span>bloqueo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bloqueo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que maneja el estado de la máquina "Bloqueado" Muestra el comportamiento cuando el sistema está bloqueado </p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>               {</div>
+<div class="line"><span class="lineno">  144</span>  setLED(1, 0, 0);</div>
+<div class="line"><span class="lineno">  145</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.setCursor(0, 0);</div>
+<div class="line"><span class="lineno">  146</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.print(<span class="stringliteral">&quot;Sistema &quot;</span>);</div>
+<div class="line"><span class="lineno">  147</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.setCursor(0, 1);</div>
+<div class="line"><span class="lineno">  148</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.print(<span class="stringliteral">&quot;Bloqueado&quot;</span>);</div>
+<div class="line"><span class="lineno">  149</span>  execute_melody(melodyBloqueo);</div>
+<div class="line"><span class="lineno">  150</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.clear();</div>
+<div class="line"><span class="lineno">  151</span>  input = Input::Timeout;</div>
+<div class="line"><span class="lineno">  152</span>}</div>
+<div class="ttc" id="amicro__config_8h_html_a2b069c92e71a060ffceec1578fe4b126"><div class="ttname"><a href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a></div><div class="ttdeci">LiquidCrystal lcd(LCD_RS, LCD_EN, LCD_D4, LCD_D5, LCD_D6, LCD_D7)</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac989da866a73e4a9b5bb3da32f8ada7a" name="ac989da866a73e4a9b5bb3da32f8ada7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac989da866a73e4a9b5bb3da32f8ada7a">&#9670;&#160;</a></span>changeVariableControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void changeVariableControl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>variable</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a></td>          <td class="paramname"><span class="paramname"><em>step</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a></td>          <td class="paramname"><span class="paramname"><em>lower_limit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="variables_8h.html#a1e59dd36aafb310776e617456b9415b5">T</a></td>          <td class="paramname"><span class="paramname"><em>upper_limit</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que permite cambiar una variable a un paso determinado a través de un caracter utilizado <br  />
+es usada para cambiar el valor de las variables en configuración </p>
+<dl class="tparams"><dt>Parámetros de plantilla</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Tipo de dato de la variable a cambiar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variable</td><td>Variable a modificar </td></tr>
+    <tr><td class="paramname">step</td><td>Paso con el que se modificará la variable (adición o substracción) </td></tr>
+    <tr><td class="paramname">key</td><td>Letra que determinará si se adiciona o substrae </td></tr>
+    <tr><td class="paramname">lower_limit</td><td>el límite inferior al cual puede llegar la variable </td></tr>
+    <tr><td class="paramname">upper_limit</td><td>el límite superior al cual puede llegar la variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>                                                                                        {</div>
+<div class="line"><span class="lineno">  213</span>  <span class="keywordflow">switch</span> (key) {</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:</div>
+<div class="line"><span class="lineno">  215</span>      <span class="keywordflow">if</span> (*variable + step &gt; upper_limit) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  216</span>      *variable += step;</div>
+<div class="line"><span class="lineno">  217</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line"><span class="lineno">  219</span>      <span class="keywordflow">if</span> (*variable - step &lt; lower_limit) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  220</span>      *variable -= step;</div>
+<div class="line"><span class="lineno">  221</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  222</span>  }</div>
+<div class="line"><span class="lineno">  223</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afe461d27b9c48d5921c00d521181f12f" name="afe461d27b9c48d5921c00d521181f12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&#160;</a></span>loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   92</span>            {  </div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">switch</span> (<a class="code hl_function" href="_s_m__config_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">stateMachine</a>.GetState()) {</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">case</span> State::Inicio: <a class="code hl_function" href="#a2c018b07f320da4371811bb498b61a82">seguridad</a>(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">case</span> State::Config: <a class="code hl_function" href="#a2a0e843767aeea4f433a28b9c54f573a">menu</a>(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">case</span> State::MonitoreoAmbiental: <a class="code hl_function" href="#a310667cc50f973b5ea8f3dda40239571">monitoreoAmbiental</a>(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">case</span> State::MonitoreoEventos: <a class="code hl_function" href="#a304e93b3b720a71793e50ef1da42d219">monitoreoEventos</a>(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">case</span> State::Alarma: <a class="code hl_function" href="#ad9ee76c563085f0c7551b4f5af30adf8">alarma</a>(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">case</span> State::Bloqueado: <a class="code hl_function" href="#a867f6fabc108b3a4c6f0dade802e3a8a">bloqueo</a>(); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  100</span>  }</div>
+<div class="line"><span class="lineno">  101</span>  <span class="comment">// Actualizar Maquina de Estados</span></div>
+<div class="line"><span class="lineno">  102</span>  <a class="code hl_function" href="_s_m__config_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">stateMachine</a>.Update();</div>
+<div class="line"><span class="lineno">  103</span>}</div>
+<div class="ttc" id="a_s_m__config_8h_html_a4d2ec6fd3a1844c88c33f1521df53a1d"><div class="ttname"><a href="_s_m__config_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">stateMachine</a></div><div class="ttdeci">StateMachine stateMachine(6, 12)</div><div class="ttdoc">Maquina de estados que controla el sistema.</div></div>
+<div class="ttc" id="asketch_8ino_html_a2a0e843767aeea4f433a28b9c54f573a"><div class="ttname"><a href="#a2a0e843767aeea4f433a28b9c54f573a">menu</a></div><div class="ttdeci">void menu()</div><div class="ttdoc">función que maneja el menú del estado de la máquina &quot;Config&quot; Muestra un menú en el que se pueden conf...</div><div class="ttdef"><b>Definition</b> sketch.ino:163</div></div>
+<div class="ttc" id="asketch_8ino_html_a2c018b07f320da4371811bb498b61a82"><div class="ttname"><a href="#a2c018b07f320da4371811bb498b61a82">seguridad</a></div><div class="ttdeci">void seguridad()</div><div class="ttdoc">función que maneja la seguridad del estado de la maquina &quot;Inicio&quot; Pide una contraseña y verifica si e...</div><div class="ttdef"><b>Definition</b> sketch.ino:106</div></div>
+<div class="ttc" id="asketch_8ino_html_a304e93b3b720a71793e50ef1da42d219"><div class="ttname"><a href="#a304e93b3b720a71793e50ef1da42d219">monitoreoEventos</a></div><div class="ttdeci">void monitoreoEventos()</div><div class="ttdoc">función que maneja el estado de la máquina &quot;MonitoreoAmbiental&quot; Monitorea los sensores de luz,...</div><div class="ttdef"><b>Definition</b> sketch.ino:200</div></div>
+<div class="ttc" id="asketch_8ino_html_a310667cc50f973b5ea8f3dda40239571"><div class="ttname"><a href="#a310667cc50f973b5ea8f3dda40239571">monitoreoAmbiental</a></div><div class="ttdeci">void monitoreoAmbiental()</div><div class="ttdoc">función que maneja el estado de la máquina &quot;MonitoreoEventos&quot; Monitorea el sensor de HALL</div><div class="ttdef"><b>Definition</b> sketch.ino:189</div></div>
+<div class="ttc" id="asketch_8ino_html_a867f6fabc108b3a4c6f0dade802e3a8a"><div class="ttname"><a href="#a867f6fabc108b3a4c6f0dade802e3a8a">bloqueo</a></div><div class="ttdeci">void bloqueo()</div><div class="ttdoc">función que maneja el estado de la máquina &quot;Bloqueado&quot; Muestra el comportamiento cuando el sistema es...</div><div class="ttdef"><b>Definition</b> sketch.ino:143</div></div>
+<div class="ttc" id="asketch_8ino_html_ad9ee76c563085f0c7551b4f5af30adf8"><div class="ttname"><a href="#ad9ee76c563085f0c7551b4f5af30adf8">alarma</a></div><div class="ttdeci">void alarma()</div><div class="ttdoc">función que maneja el estado de la máquina &quot;Alarma&quot; Muestra el mensaje de precaución con el sonido qu...</div><div class="ttdef"><b>Definition</b> sketch.ino:154</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a0e843767aeea4f433a28b9c54f573a" name="a2a0e843767aeea4f433a28b9c54f573a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a0e843767aeea4f433a28b9c54f573a">&#9670;&#160;</a></span>menu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void menu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que maneja el menú del estado de la máquina "Config" Muestra un menú en el que se pueden configurar las variables que ponen los límites cuando se alcanza un registro "peligroso" </p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>            {</div>
+<div class="line"><span class="lineno">  164</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> key = customKeypad.getKey();</div>
+<div class="line"><span class="lineno">  165</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="micro__config_8h.html#a70e4443e59fd7b34fac6fe6f54d97d5e">button</a>.check() == LOW) input = Input::BotonPresionado;</div>
+<div class="line"><span class="lineno">  166</span>  <span class="keywordflow">if</span> (!key) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">switch</span> (mainMenu.get_focusedLine()) {</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">case</span> 0: <a class="code hl_function" href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl&lt;float&gt;</a>(&amp;tmp_high, 0.5, key, tmp_low, 100); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">case</span> 1: <a class="code hl_function" href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl&lt;float&gt;</a>(&amp;tmp_low, 0.5, key, -50, tmp_high); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">case</span> 2: <a class="code hl_function" href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl&lt;int16_t&gt;</a>(&amp;luz_high, 10, key, luz_low, 1000); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">case</span> 3: <a class="code hl_function" href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl&lt;int16_t&gt;</a>(&amp;luz_low, 10, key, 0, luz_high); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">case</span> 4: <a class="code hl_function" href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl&lt;int16_t&gt;</a>(&amp;hall_high, 10, key, -1000, 1000); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">case</span> 5:</div>
+<div class="line"><span class="lineno">  174</span>      <span class="keywordflow">if</span> (key == <span class="charliteral">&#39;B&#39;</span>) {</div>
+<div class="line"><span class="lineno">  175</span>        tmp_high = DEF_TMP_HIGH;</div>
+<div class="line"><span class="lineno">  176</span>        tmp_low = DEF_TMP_LOW;</div>
+<div class="line"><span class="lineno">  177</span>        luz_high = DEF_LUZ_HIGH;</div>
+<div class="line"><span class="lineno">  178</span>        luz_low = DEF_LUZ_LOW;</div>
+<div class="line"><span class="lineno">  179</span>        hall_high = DEF_HALL;</div>
+<div class="line"><span class="lineno">  180</span>      }</div>
+<div class="line"><span class="lineno">  181</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>  }</div>
+<div class="line"><span class="lineno">  183</span>  <span class="keywordflow">if</span> (key == <span class="charliteral">&#39;A&#39;</span>) {</div>
+<div class="line"><span class="lineno">  184</span>    mainMenu.switch_focus();</div>
+<div class="line"><span class="lineno">  185</span>  }</div>
+<div class="line"><span class="lineno">  186</span>  mainMenu.update();</div>
+<div class="line"><span class="lineno">  187</span>}</div>
+<div class="ttc" id="asketch_8ino_html_ac989da866a73e4a9b5bb3da32f8ada7a"><div class="ttname"><a href="#ac989da866a73e4a9b5bb3da32f8ada7a">changeVariableControl</a></div><div class="ttdeci">void changeVariableControl(T *variable, T step, char key, T lower_limit, T upper_limit)</div><div class="ttdoc">función que permite cambiar una variable a un paso determinado a través de un caracter utilizado  es ...</div><div class="ttdef"><b>Definition</b> sketch.ino:212</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a310667cc50f973b5ea8f3dda40239571" name="a310667cc50f973b5ea8f3dda40239571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310667cc50f973b5ea8f3dda40239571">&#9670;&#160;</a></span>monitoreoAmbiental()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitoreoAmbiental </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que maneja el estado de la máquina "MonitoreoEventos" Monitorea el sensor de HALL </p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>                          {</div>
+<div class="line"><span class="lineno">  190</span>  taskTemperatura.Update();</div>
+<div class="line"><span class="lineno">  191</span>  taskHumedad.Update();</div>
+<div class="line"><span class="lineno">  192</span>  taskLuz.Update();</div>
+<div class="line"><span class="lineno">  193</span>  taskHall.Update();</div>
+<div class="line"><span class="lineno">  194</span>  taskTimeoutAmbiental.Update();</div>
+<div class="line"><span class="lineno">  195</span>  taskUpdateMenu.Update();</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="micro__config_8h.html#a70e4443e59fd7b34fac6fe6f54d97d5e">button</a>.check() == LOW) input = Input::BotonPresionado;</div>
+<div class="line"><span class="lineno">  198</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a304e93b3b720a71793e50ef1da42d219" name="a304e93b3b720a71793e50ef1da42d219"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a304e93b3b720a71793e50ef1da42d219">&#9670;&#160;</a></span>monitoreoEventos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitoreoEventos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que maneja el estado de la máquina "MonitoreoAmbiental" Monitorea los sensores de luz, temperatura y humedad* </p>
+<div class="fragment"><div class="line"><span class="lineno">  200</span>                        {</div>
+<div class="line"><span class="lineno">  201</span>  taskTemperatura.Update();</div>
+<div class="line"><span class="lineno">  202</span>  taskHumedad.Update();</div>
+<div class="line"><span class="lineno">  203</span>  taskLuz.Update();</div>
+<div class="line"><span class="lineno">  204</span>  taskHall.Update();</div>
+<div class="line"><span class="lineno">  205</span>  taskTimeoutEventos.Update();</div>
+<div class="line"><span class="lineno">  206</span>  taskUpdateMenu.Update();</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="micro__config_8h.html#a70e4443e59fd7b34fac6fe6f54d97d5e">button</a>.check() == LOW) input = Input::BotonPresionado;</div>
+<div class="line"><span class="lineno">  209</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2c018b07f320da4371811bb498b61a82" name="a2c018b07f320da4371811bb498b61a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c018b07f320da4371811bb498b61a82">&#9670;&#160;</a></span>seguridad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seguridad </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>función que maneja la seguridad del estado de la maquina "Inicio" Pide una contraseña y verifica si es correcta; también maneja el número de intentos y la consideración de que el usuario deje la contraseña incompleta </p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                 {</div>
+<div class="line"><span class="lineno">  107</span>  taskTimeoutInicioAFK.Update();</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">if</span> (password_attempts == 0) {</div>
+<div class="line"><span class="lineno">  110</span>    input = BloqueoSistema;</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  112</span>  }</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> key = customKeypad.getKey();</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">if</span> (!key) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>  taskTimeoutInicioAFK.Start();</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">if</span> (key != <span class="charliteral">&#39;A&#39;</span>) {</div>
+<div class="line"><span class="lineno">  120</span>    keypadBuffer.<a class="code hl_function" href="structbuffer.html#ad709936a1419962ee0ae78015cd89f0c">push</a>(key);</div>
+<div class="line"><span class="lineno">  121</span>    <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.print(<span class="charliteral">&#39;*&#39;</span>);</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (!keypadBuffer.<a class="code hl_function" href="structbuffer.html#ac0609f53973010c9da41ca768e061cce">isFull</a>()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  123</span>  }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">if</span> (keypadBuffer.<a class="code hl_variable" href="structbuffer.html#a6ede7eeacad2d34eae3393536763b997">len</a> == password_len &amp;&amp; strncmp(password, keypadBuffer.<a class="code hl_variable" href="structbuffer.html#ab584d4afcf9af34d78703ad5cd3fcb0e">str</a>, password_len) == 0) {</div>
+<div class="line"><span class="lineno">  126</span>    setLED(0, 1, 0);</div>
+<div class="line"><span class="lineno">  127</span>    <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.clear();</div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.print(<span class="stringliteral">&quot;Correcto&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>    input = ClaveCorrecta; <span class="comment">// &lt;-- Input para la maquina de estados</span></div>
+<div class="line"><span class="lineno">  130</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  131</span>    --password_attempts;</div>
+<div class="line"><span class="lineno">  132</span>    setLED(1, 1, 0);</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.clear();</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.print(<span class="stringliteral">&quot;Incorrecto&quot;</span>);    </div>
+<div class="line"><span class="lineno">  135</span>  }</div>
+<div class="line"><span class="lineno">  136</span>  delay(1000);</div>
+<div class="line"><span class="lineno">  137</span>  setLED(0, 0, 0);  </div>
+<div class="line"><span class="lineno">  138</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.clear();</div>
+<div class="line"><span class="lineno">  139</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.print(<span class="stringliteral">&quot;Clave: &quot;</span>);</div>
+<div class="line"><span class="lineno">  140</span>  keypadBuffer.<a class="code hl_function" href="structbuffer.html#a519e92404291b3054f04d3247dbf9e40">clear</a>();</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+<div class="ttc" id="astructbuffer_html_a519e92404291b3054f04d3247dbf9e40"><div class="ttname"><a href="structbuffer.html#a519e92404291b3054f04d3247dbf9e40">buffer::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Método para limpiar el buffer</div><div class="ttdef"><b>Definition</b> variables.h:43</div></div>
+<div class="ttc" id="astructbuffer_html_a6ede7eeacad2d34eae3393536763b997"><div class="ttname"><a href="structbuffer.html#a6ede7eeacad2d34eae3393536763b997">buffer::len</a></div><div class="ttdeci">byte len</div><div class="ttdef"><b>Definition</b> variables.h:31</div></div>
+<div class="ttc" id="astructbuffer_html_ab584d4afcf9af34d78703ad5cd3fcb0e"><div class="ttname"><a href="structbuffer.html#ab584d4afcf9af34d78703ad5cd3fcb0e">buffer::str</a></div><div class="ttdeci">char str[size+1]</div><div class="ttdef"><b>Definition</b> variables.h:30</div></div>
+<div class="ttc" id="astructbuffer_html_ac0609f53973010c9da41ca768e061cce"><div class="ttname"><a href="structbuffer.html#ac0609f53973010c9da41ca768e061cce">buffer::isFull</a></div><div class="ttdeci">bool isFull()</div><div class="ttdoc">Método para saber si el buffer está lleno.</div><div class="ttdef"><b>Definition</b> variables.h:55</div></div>
+<div class="ttc" id="astructbuffer_html_ad709936a1419962ee0ae78015cd89f0c"><div class="ttname"><a href="structbuffer.html#ad709936a1419962ee0ae78015cd89f0c">buffer::push</a></div><div class="ttdeci">void push(char chr)</div><div class="ttdoc">Método para agregar un carácter al buffer.</div><div class="ttdef"><b>Definition</b> variables.h:36</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4fc01d736fe50cf5b977f755b675f11d" name="a4fc01d736fe50cf5b977f755b675f11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc01d736fe50cf5b977f755b675f11d">&#9670;&#160;</a></span>setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   70</span>             {</div>
+<div class="line"><span class="lineno">   71</span>  <span class="comment">// Inicializa los componentes necesarios</span></div>
+<div class="line"><span class="lineno">   72</span>  <a class="code hl_function" href="micro__config_8h.html#a2b069c92e71a060ffceec1578fe4b126">lcd</a>.begin(16, 2);</div>
+<div class="line"><span class="lineno">   73</span>  <a class="code hl_function" href="micro__config_8h.html#a6cfd3910a419b94236d21fd00dcfe787">dht</a>.begin();</div>
+<div class="line"><span class="lineno">   74</span>  Serial.begin(9600);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  <span class="comment">// Inicializa el LED</span></div>
+<div class="line"><span class="lineno">   77</span>  pinMode(LED_R, OUTPUT);</div>
+<div class="line"><span class="lineno">   78</span>  pinMode(LED_G, OUTPUT);</div>
+<div class="line"><span class="lineno">   79</span>  pinMode(LED_B, OUTPUT);</div>
+<div class="line"><span class="lineno">   80</span>  setLED(0, 0, 0);</div>
+<div class="line"><span class="lineno">   81</span>  <span class="comment">// Inicializa el menu del lcd</span></div>
+<div class="line"><span class="lineno">   82</span>  <a class="code hl_function" href="menu__config_8h.html#a4c8aff720db898c3dc82feb6481067c5">setupLiquidMenu</a>();</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>  <span class="comment">// Inicializa la maquina de estados</span></div>
+<div class="line"><span class="lineno">   85</span>  Serial.println(<span class="stringliteral">&quot;Starting State Machine...&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>  <a class="code hl_function" href="_s_m__config_8h.html#a0f66d65ae208fa0a707755d77441dd5f">setupStateMachine</a>();</div>
+<div class="line"><span class="lineno">   87</span>  Serial.println(<span class="stringliteral">&quot;State Machine Started&quot;</span>);</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <a class="code hl_function" href="_s_m__config_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">stateMachine</a>.SetState(Inicio, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   90</span>}</div>
+<div class="ttc" id="a_s_m__config_8h_html_a0f66d65ae208fa0a707755d77441dd5f"><div class="ttname"><a href="_s_m__config_8h.html#a0f66d65ae208fa0a707755d77441dd5f">setupStateMachine</a></div><div class="ttdeci">void setupStateMachine()</div><div class="ttdoc">función que prepara la configuración de la máquina de estados, agregando transiciones y funciones de ...</div><div class="ttdef"><b>Definition</b> SM_config.h:98</div></div>
+<div class="ttc" id="amenu__config_8h_html_a4c8aff720db898c3dc82feb6481067c5"><div class="ttname"><a href="menu__config_8h.html#a4c8aff720db898c3dc82feb6481067c5">setupLiquidMenu</a></div><div class="ttdeci">void setupLiquidMenu()</div><div class="ttdoc">Función que inicializa la configuración del menu de la librería LiquidMenu.</div><div class="ttdef"><b>Definition</b> menu_config.h:50</div></div>
+<div class="ttc" id="amicro__config_8h_html_a6cfd3910a419b94236d21fd00dcfe787"><div class="ttname"><a href="micro__config_8h.html#a6cfd3910a419b94236d21fd00dcfe787">dht</a></div><div class="ttdeci">DHT dht(DHT_PIN, DHT_TYPE)</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

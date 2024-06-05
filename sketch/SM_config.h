@@ -188,6 +188,15 @@ void onEnteringConfig() {
   mainMenu.update();
 }
 void onLeavingConfig() {
+  H = 0;
+  humedad.clear();
+  L = 0;
+  luz.clear();
+  T = 0;
+  temperatura.clear();
+  HALL = 0;
+  hall.clear();
+  
   Serial.println("Leaving Configuracion");
 }
 

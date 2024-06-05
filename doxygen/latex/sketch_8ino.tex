@@ -1,0 +1,340 @@
+\doxysection{Referencia del archivo sketch/sketch.ino}
+\hypertarget{sketch_8ino}{}\label{sketch_8ino}\index{sketch/sketch.ino@{sketch/sketch.ino}}
+
+
+Archivo principal del proyecto.  
+
+
+{\ttfamily \#include "{}variables.\+h"{}}\newline
+{\ttfamily \#include "{}util.\+h"{}}\newline
+{\ttfamily \#include "{}Average.\+h"{}}\newline
+{\ttfamily \#include "{}melody.\+h"{}}\newline
+{\ttfamily \#include "{}SM\+\_\+config.\+h"{}}\newline
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sketch_8ino_a2c018b07f320da4371811bb498b61a82}{seguridad}} ()
+\begin{DoxyCompactList}\small\item\em función que maneja la seguridad del estado de la maquina "{}\+Inicio"{} Pide una contraseña y verifica si es correcta; también maneja el número de intentos y la consideración de que el usuario deje la contraseña incompleta \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sketch_8ino_a2a0e843767aeea4f433a28b9c54f573a}{menu}} ()
+\begin{DoxyCompactList}\small\item\em función que maneja el menú del estado de la máquina "{}\+Config"{} Muestra un menú en el que se pueden configurar las variables que ponen los límites cuando se alcanza un registro "{}peligroso"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sketch_8ino_a867f6fabc108b3a4c6f0dade802e3a8a}{bloqueo}} ()
+\begin{DoxyCompactList}\small\item\em función que maneja el estado de la máquina "{}\+Bloqueado"{} Muestra el comportamiento cuando el sistema está bloqueado \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sketch_8ino_ad9ee76c563085f0c7551b4f5af30adf8}{alarma}} ()
+\begin{DoxyCompactList}\small\item\em función que maneja el estado de la máquina "{}\+Alarma"{} Muestra el mensaje de precaución con el sonido que se hace cuando un monitoreo encuentra una lectura "{}alta"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sketch_8ino_a310667cc50f973b5ea8f3dda40239571}{monitoreo\+Ambiental}} ()
+\begin{DoxyCompactList}\small\item\em función que maneja el estado de la máquina "{}\+Monitoreo\+Eventos"{} Monitorea el sensor de HALL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sketch_8ino_a304e93b3b720a71793e50ef1da42d219}{monitoreo\+Eventos}} ()
+\begin{DoxyCompactList}\small\item\em función que maneja el estado de la máquina "{}\+Monitoreo\+Ambiental"{} Monitorea los sensores de luz, temperatura y humedad\texorpdfstring{$\ast$}{*} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ }\\void \mbox{\hyperlink{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}{change\+Variable\+Control}} (\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \texorpdfstring{$\ast$}{*}variable, \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} step, char key, \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} lower\+\_\+limit, \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} upper\+\_\+limit)
+\begin{DoxyCompactList}\small\item\em función que permite cambiar una variable a un paso determinado a través de un caracter utilizado ~\newline
+es usada para cambiar el valor de las variables en configuración \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sketch_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{sketch_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Archivo principal del proyecto. 
+
+(Main File) \begin{DoxyAuthor}{Autor}
+Fredy Anaya 
+
+Jorge Mera 
+
+David Chacón 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2024-\/06-\/02
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{sketch_8ino_ad9ee76c563085f0c7551b4f5af30adf8}\index{sketch.ino@{sketch.ino}!alarma@{alarma}}
+\index{alarma@{alarma}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{alarma()}{alarma()}}
+{\footnotesize\ttfamily \label{sketch_8ino_ad9ee76c563085f0c7551b4f5af30adf8} 
+void alarma (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que maneja el estado de la máquina "{}\+Alarma"{} Muestra el mensaje de precaución con el sonido que se hace cuando un monitoreo encuentra una lectura "{}alta"{} 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ taskTimeoutAlarma.Update();}
+\DoxyCodeLine{00156\ \ \ taskTemperatura.Update();}
+\DoxyCodeLine{00157\ \ \ taskHumedad.Update();}
+\DoxyCodeLine{00158\ \ \ taskLuz.Update();}
+\DoxyCodeLine{00159\ \ \ taskHall.Update();}
+\DoxyCodeLine{00160\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}{button}}.check()\ ==\ LOW)\ input\ =\ Input::BotonPresionado;}
+\DoxyCodeLine{00161\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_a867f6fabc108b3a4c6f0dade802e3a8a}\index{sketch.ino@{sketch.ino}!bloqueo@{bloqueo}}
+\index{bloqueo@{bloqueo}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{bloqueo()}{bloqueo()}}
+{\footnotesize\ttfamily \label{sketch_8ino_a867f6fabc108b3a4c6f0dade802e3a8a} 
+void bloqueo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que maneja el estado de la máquina "{}\+Bloqueado"{} Muestra el comportamiento cuando el sistema está bloqueado 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ setLED(1,\ 0,\ 0);}
+\DoxyCodeLine{00145\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.setCursor(0,\ 0);}
+\DoxyCodeLine{00146\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Sistema\ "{}});}
+\DoxyCodeLine{00147\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.setCursor(0,\ 1);}
+\DoxyCodeLine{00148\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Bloqueado"{}});}
+\DoxyCodeLine{00149\ \ \ execute\_melody(melodyBloqueo);}
+\DoxyCodeLine{00150\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.clear();}
+\DoxyCodeLine{00151\ \ \ input\ =\ Input::Timeout;}
+\DoxyCodeLine{00152\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}\index{sketch.ino@{sketch.ino}!changeVariableControl@{changeVariableControl}}
+\index{changeVariableControl@{changeVariableControl}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{changeVariableControl()}{changeVariableControl()}}
+{\footnotesize\ttfamily \label{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a} 
+template$<$typename \mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} $>$ \\
+void change\+Variable\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}} \texorpdfstring{$\ast$}{*}}]{variable}{, }\item[{\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}}]{step}{, }\item[{char}]{key}{, }\item[{\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}}]{lower\+\_\+limit}{, }\item[{\mbox{\hyperlink{variables_8h_a1e59dd36aafb310776e617456b9415b5}{T}}}]{upper\+\_\+limit}{}\end{DoxyParamCaption})}
+
+
+
+función que permite cambiar una variable a un paso determinado a través de un caracter utilizado ~\newline
+es usada para cambiar el valor de las variables en configuración 
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo de dato de la variable a cambiar \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parámetros}
+{\em variable} & Variable a modificar \\
+\hline
+{\em step} & Paso con el que se modificará la variable (adición o substracción) \\
+\hline
+{\em key} & Letra que determinará si se adiciona o substrae \\
+\hline
+{\em lower\+\_\+limit} & el límite inferior al cual puede llegar la variable \\
+\hline
+{\em upper\+\_\+limit} & el límite superior al cual puede llegar la variable \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \textcolor{keywordflow}{switch}\ (key)\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'C'}:}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*variable\ +\ step\ >\ upper\_limit)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ *variable\ +=\ step;}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'D'}:}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*variable\ -\/\ step\ <\ lower\_limit)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ *variable\ -\/=\ step;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00222\ \ \ \}}
+\DoxyCodeLine{00223\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_afe461d27b9c48d5921c00d521181f12f}\index{sketch.ino@{sketch.ino}!loop@{loop}}
+\index{loop@{loop}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{sketch_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{_s_m__config_8h_a4d2ec6fd3a1844c88c33f1521df53a1d}{stateMachine}}.GetState())\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{case}\ State::Inicio:\ \mbox{\hyperlink{sketch_8ino_a2c018b07f320da4371811bb498b61a82}{seguridad}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{case}\ State::Config:\ \mbox{\hyperlink{sketch_8ino_a2a0e843767aeea4f433a28b9c54f573a}{menu}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{case}\ State::MonitoreoAmbiental:\ \mbox{\hyperlink{sketch_8ino_a310667cc50f973b5ea8f3dda40239571}{monitoreoAmbiental}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{case}\ State::MonitoreoEventos:\ \mbox{\hyperlink{sketch_8ino_a304e93b3b720a71793e50ef1da42d219}{monitoreoEventos}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{case}\ State::Alarma:\ \mbox{\hyperlink{sketch_8ino_ad9ee76c563085f0c7551b4f5af30adf8}{alarma}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{case}\ State::Bloqueado:\ \mbox{\hyperlink{sketch_8ino_a867f6fabc108b3a4c6f0dade802e3a8a}{bloqueo}}();\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100\ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \textcolor{comment}{//\ Actualizar\ Maquina\ de\ Estados}}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{_s_m__config_8h_a4d2ec6fd3a1844c88c33f1521df53a1d}{stateMachine}}.Update();}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_a2a0e843767aeea4f433a28b9c54f573a}\index{sketch.ino@{sketch.ino}!menu@{menu}}
+\index{menu@{menu}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \label{sketch_8ino_a2a0e843767aeea4f433a28b9c54f573a} 
+void menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que maneja el menú del estado de la máquina "{}\+Config"{} Muestra un menú en el que se pueden configurar las variables que ponen los límites cuando se alcanza un registro "{}peligroso"{} 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ key\ =\ customKeypad.getKey();}
+\DoxyCodeLine{00165\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}{button}}.check()\ ==\ LOW)\ input\ =\ Input::BotonPresionado;}
+\DoxyCodeLine{00166\ \ \ \textcolor{keywordflow}{if}\ (!key)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00167\ \ \ \textcolor{keywordflow}{switch}\ (mainMenu.get\_focusedLine())\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ \mbox{\hyperlink{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}{changeVariableControl<float>}}(\&tmp\_high,\ 0.5,\ key,\ tmp\_low,\ 100);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \mbox{\hyperlink{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}{changeVariableControl<float>}}(\&tmp\_low,\ 0.5,\ key,\ -\/50,\ tmp\_high);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \mbox{\hyperlink{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}{changeVariableControl<int16\_t>}}(\&luz\_high,\ 10,\ key,\ luz\_low,\ 1000);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \mbox{\hyperlink{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}{changeVariableControl<int16\_t>}}(\&luz\_low,\ 10,\ key,\ 0,\ luz\_high);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \mbox{\hyperlink{sketch_8ino_ac989da866a73e4a9b5bb3da32f8ada7a}{changeVariableControl<int16\_t>}}(\&hall\_high,\ 10,\ key,\ -\/1000,\ 1000);\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (key\ ==\ \textcolor{charliteral}{'B'})\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ tmp\_high\ =\ DEF\_TMP\_HIGH;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ tmp\_low\ =\ DEF\_TMP\_LOW;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ luz\_high\ =\ DEF\_LUZ\_HIGH;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ luz\_low\ =\ DEF\_LUZ\_LOW;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ hall\_high\ =\ DEF\_HALL;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00182\ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \textcolor{keywordflow}{if}\ (key\ ==\ \textcolor{charliteral}{'A'})\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ mainMenu.switch\_focus();}
+\DoxyCodeLine{00185\ \ \ \}}
+\DoxyCodeLine{00186\ \ \ mainMenu.update();}
+\DoxyCodeLine{00187\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_a310667cc50f973b5ea8f3dda40239571}\index{sketch.ino@{sketch.ino}!monitoreoAmbiental@{monitoreoAmbiental}}
+\index{monitoreoAmbiental@{monitoreoAmbiental}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{monitoreoAmbiental()}{monitoreoAmbiental()}}
+{\footnotesize\ttfamily \label{sketch_8ino_a310667cc50f973b5ea8f3dda40239571} 
+void monitoreo\+Ambiental (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que maneja el estado de la máquina "{}\+Monitoreo\+Eventos"{} Monitorea el sensor de HALL 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ taskTemperatura.Update();}
+\DoxyCodeLine{00191\ \ \ taskHumedad.Update();}
+\DoxyCodeLine{00192\ \ \ taskLuz.Update();}
+\DoxyCodeLine{00193\ \ \ taskHall.Update();}
+\DoxyCodeLine{00194\ \ \ taskTimeoutAmbiental.Update();}
+\DoxyCodeLine{00195\ \ \ taskUpdateMenu.Update();}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}{button}}.check()\ ==\ LOW)\ input\ =\ Input::BotonPresionado;}
+\DoxyCodeLine{00198\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_a304e93b3b720a71793e50ef1da42d219}\index{sketch.ino@{sketch.ino}!monitoreoEventos@{monitoreoEventos}}
+\index{monitoreoEventos@{monitoreoEventos}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{monitoreoEventos()}{monitoreoEventos()}}
+{\footnotesize\ttfamily \label{sketch_8ino_a304e93b3b720a71793e50ef1da42d219} 
+void monitoreo\+Eventos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que maneja el estado de la máquina "{}\+Monitoreo\+Ambiental"{} Monitorea los sensores de luz, temperatura y humedad\texorpdfstring{$\ast$}{*} 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ taskTemperatura.Update();}
+\DoxyCodeLine{00202\ \ \ taskHumedad.Update();}
+\DoxyCodeLine{00203\ \ \ taskLuz.Update();}
+\DoxyCodeLine{00204\ \ \ taskHall.Update();}
+\DoxyCodeLine{00205\ \ \ taskTimeoutEventos.Update();}
+\DoxyCodeLine{00206\ \ \ taskUpdateMenu.Update();}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}{button}}.check()\ ==\ LOW)\ input\ =\ Input::BotonPresionado;}
+\DoxyCodeLine{00209\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_a2c018b07f320da4371811bb498b61a82}\index{sketch.ino@{sketch.ino}!seguridad@{seguridad}}
+\index{seguridad@{seguridad}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{seguridad()}{seguridad()}}
+{\footnotesize\ttfamily \label{sketch_8ino_a2c018b07f320da4371811bb498b61a82} 
+void seguridad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+función que maneja la seguridad del estado de la maquina "{}\+Inicio"{} Pide una contraseña y verifica si es correcta; también maneja el número de intentos y la consideración de que el usuario deje la contraseña incompleta 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ taskTimeoutInicioAFK.Update();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordflow}{if}\ (password\_attempts\ ==\ 0)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ input\ =\ BloqueoSistema;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00112\ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ key\ =\ customKeypad.getKey();}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordflow}{if}\ (!key)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ taskTimeoutInicioAFK.Start();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordflow}{if}\ (key\ !=\ \textcolor{charliteral}{'A'})\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ keypadBuffer.\mbox{\hyperlink{structbuffer_ad709936a1419962ee0ae78015cd89f0c}{push}}(key);}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{charliteral}{'*'});}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (!keypadBuffer.\mbox{\hyperlink{structbuffer_ac0609f53973010c9da41ca768e061cce}{isFull}}())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00123\ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordflow}{if}\ (keypadBuffer.\mbox{\hyperlink{structbuffer_a6ede7eeacad2d34eae3393536763b997}{len}}\ ==\ password\_len\ \&\&\ strncmp(password,\ keypadBuffer.\mbox{\hyperlink{structbuffer_ab584d4afcf9af34d78703ad5cd3fcb0e}{str}},\ password\_len)\ ==\ 0)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ setLED(0,\ 1,\ 0);}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.clear();}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Correcto"{}});}
+\DoxyCodeLine{00129\ \ \ \ \ input\ =\ ClaveCorrecta;\ \textcolor{comment}{//\ <-\/-\/\ Input\ para\ la\ maquina\ de\ estados}}
+\DoxyCodeLine{00130\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ -\/-\/password\_attempts;}
+\DoxyCodeLine{00132\ \ \ \ \ setLED(1,\ 1,\ 0);}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.clear();}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Incorrecto"{}});\ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \}}
+\DoxyCodeLine{00136\ \ \ delay(1000);}
+\DoxyCodeLine{00137\ \ \ setLED(0,\ 0,\ 0);\ \ }
+\DoxyCodeLine{00138\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.clear();}
+\DoxyCodeLine{00139\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.print(\textcolor{stringliteral}{"{}Clave:\ "{}});}
+\DoxyCodeLine{00140\ \ \ keypadBuffer.\mbox{\hyperlink{structbuffer_a519e92404291b3054f04d3247dbf9e40}{clear}}();}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}
+\Hypertarget{sketch_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{sketch.ino@{sketch.ino}!setup@{setup}}
+\index{setup@{setup}!sketch.ino@{sketch.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{sketch_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \textcolor{comment}{//\ Inicializa\ los\ componentes\ necesarios}}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}.begin(16,\ 2);}
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787}{dht}}.begin();}
+\DoxyCodeLine{00074\ \ \ Serial.begin(9600);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{comment}{//\ Inicializa\ el\ LED}}
+\DoxyCodeLine{00077\ \ \ pinMode(LED\_R,\ OUTPUT);}
+\DoxyCodeLine{00078\ \ \ pinMode(LED\_G,\ OUTPUT);}
+\DoxyCodeLine{00079\ \ \ pinMode(LED\_B,\ OUTPUT);}
+\DoxyCodeLine{00080\ \ \ setLED(0,\ 0,\ 0);}
+\DoxyCodeLine{00081\ \ \ \textcolor{comment}{//\ Inicializa\ el\ menu\ del\ lcd}}
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{menu__config_8h_a4c8aff720db898c3dc82feb6481067c5}{setupLiquidMenu}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{comment}{//\ Inicializa\ la\ maquina\ de\ estados}}
+\DoxyCodeLine{00085\ \ \ Serial.println(\textcolor{stringliteral}{"{}Starting\ State\ Machine..."{}});}
+\DoxyCodeLine{00086\ \ \ \mbox{\hyperlink{_s_m__config_8h_a0f66d65ae208fa0a707755d77441dd5f}{setupStateMachine}}();}
+\DoxyCodeLine{00087\ \ \ Serial.println(\textcolor{stringliteral}{"{}State\ Machine\ Started"{}});}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \mbox{\hyperlink{_s_m__config_8h_a4d2ec6fd3a1844c88c33f1521df53a1d}{stateMachine}}.SetState(Inicio,\ \textcolor{keyword}{false},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}

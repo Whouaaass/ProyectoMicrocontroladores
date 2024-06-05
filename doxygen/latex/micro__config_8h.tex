@@ -1,0 +1,185 @@
+\doxysection{Referencia del archivo sketch/micro\+\_\+config.h}
+\hypertarget{micro__config_8h}{}\label{micro__config_8h}\index{sketch/micro\_config.h@{sketch/micro\_config.h}}
+
+
+Header de configuración de los microcontroladores.  
+
+
+{\ttfamily \#include $<$Liquid\+Crystal.\+h$>$}\newline
+{\ttfamily \#include $<$Keypad.\+h$>$}\newline
+{\ttfamily \#include $<$DHT.\+h$>$}\newline
+{\ttfamily \#include "{}Button.\+h"{}}\newline
+\doxysubsubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{micro__config_8h_abfae246a91df54e807874aa8680beccb}\label{micro__config_8h_abfae246a91df54e807874aa8680beccb} 
+\#define {\bfseries DHT\+\_\+\+TYPE}~DHT11
+\item 
+\Hypertarget{micro__config_8h_a661d236dd49f3aef3a2cf46cf6a1405e}\label{micro__config_8h_a661d236dd49f3aef3a2cf46cf6a1405e} 
+\#define {\bfseries DHT\+\_\+\+PIN}~39
+\item 
+\Hypertarget{micro__config_8h_a62a877c4e8b61127ff276b1ecb8856e3}\label{micro__config_8h_a62a877c4e8b61127ff276b1ecb8856e3} 
+\#define {\bfseries PHOTOCELL\+\_\+\+PIN}~A0
+\item 
+\Hypertarget{micro__config_8h_ab61d0981ed42df9e18211b273d22cfcd}\label{micro__config_8h_ab61d0981ed42df9e18211b273d22cfcd} 
+\#define {\bfseries BUZZER\+\_\+\+PIN}~7
+\item 
+\Hypertarget{micro__config_8h_a820b6b8369fe8a5102e352fd4bf670c9}\label{micro__config_8h_a820b6b8369fe8a5102e352fd4bf670c9} 
+\#define {\bfseries HALL\+\_\+\+PIN}~A1
+\item 
+\Hypertarget{micro__config_8h_a4781e073871c6f27f89b9463ad3a4ed1}\label{micro__config_8h_a4781e073871c6f27f89b9463ad3a4ed1} 
+\#define {\bfseries LCD\+\_\+\+RS}~12
+\item 
+\Hypertarget{micro__config_8h_a1640ffbc0d8ec0f7edb04a2b93918072}\label{micro__config_8h_a1640ffbc0d8ec0f7edb04a2b93918072} 
+\#define {\bfseries LCD\+\_\+\+EN}~11
+\item 
+\Hypertarget{micro__config_8h_ade7e247311032a474711416da480ed8b}\label{micro__config_8h_ade7e247311032a474711416da480ed8b} 
+\#define {\bfseries LCD\+\_\+\+D4}~5
+\item 
+\Hypertarget{micro__config_8h_a5b91fe480c768d4f246f3890207bfbfc}\label{micro__config_8h_a5b91fe480c768d4f246f3890207bfbfc} 
+\#define {\bfseries LCD\+\_\+\+D5}~4
+\item 
+\Hypertarget{micro__config_8h_a72e105fcda5fd1c07b5f391379a439d4}\label{micro__config_8h_a72e105fcda5fd1c07b5f391379a439d4} 
+\#define {\bfseries LCD\+\_\+\+D6}~3
+\item 
+\Hypertarget{micro__config_8h_abd65075e01c7413419581aedee5bcc24}\label{micro__config_8h_abd65075e01c7413419581aedee5bcc24} 
+\#define {\bfseries LCD\+\_\+\+D7}~2
+\item 
+\Hypertarget{micro__config_8h_af2c3728e2cab6cc43f6cde3e34732fba}\label{micro__config_8h_af2c3728e2cab6cc43f6cde3e34732fba} 
+\#define {\bfseries LED\+\_\+R}~8
+\item 
+\Hypertarget{micro__config_8h_a10508cee43bdf782fe54028e56c39421}\label{micro__config_8h_a10508cee43bdf782fe54028e56c39421} 
+\#define {\bfseries LED\+\_\+G}~9
+\item 
+\Hypertarget{micro__config_8h_a2d0969469518b59d85bfa78504cffef9}\label{micro__config_8h_a2d0969469518b59d85bfa78504cffef9} 
+\#define {\bfseries LED\+\_\+B}~10
+\item 
+\Hypertarget{micro__config_8h_abc2ad14f0789907024ac765711ffd3da}\label{micro__config_8h_abc2ad14f0789907024ac765711ffd3da} 
+\#define {\bfseries BUTTON\+\_\+\+PIN}~53
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+Liquid\+Crystal \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}} (LCD\+\_\+\+RS, LCD\+\_\+\+EN, LCD\+\_\+\+D4, LCD\+\_\+\+D5, LCD\+\_\+\+D6, LCD\+\_\+\+D7)
+\item 
+DHT \mbox{\hyperlink{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787}{dht}} (DHT\+\_\+\+PIN, DHT\+\_\+\+TYPE)
+\item 
+Button \mbox{\hyperlink{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}{button}} (BUTTON\+\_\+\+PIN, true)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const byte \mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\+\_\+\+ROWS}} = 4
+\item 
+const byte \mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\+\_\+\+COLS}} = 4
+\item 
+char \mbox{\hyperlink{micro__config_8h_ac36b2ed2f80b7082e7f445a4e9a46d77}{pad\+Keys}} \mbox{[}\mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\+\_\+\+ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\+\_\+\+COLS}}\mbox{]}
+\item 
+byte \mbox{\hyperlink{micro__config_8h_ab5b0e385bda10b8759ec3bbd0ce6986b}{keypad\+Row\+Pins}} \mbox{[}\mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\+\_\+\+ROWS}}\mbox{]} = \{22, 24, 26, 28\}
+\item 
+byte \mbox{\hyperlink{micro__config_8h_a129b4baead691e528cc5ddee239919eb}{keypad\+Col\+Pins}} \mbox{[}\mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\+\_\+\+COLS}}\mbox{]} = \{30, 32, 34, 36\}
+\item 
+\Hypertarget{micro__config_8h_a1d289fcc804ecdd92dfd8fef8f740bf0}\label{micro__config_8h_a1d289fcc804ecdd92dfd8fef8f740bf0} 
+Keypad {\bfseries custom\+Keypad} = Keypad( make\+Keymap(\mbox{\hyperlink{micro__config_8h_ac36b2ed2f80b7082e7f445a4e9a46d77}{pad\+Keys}}), \mbox{\hyperlink{micro__config_8h_ab5b0e385bda10b8759ec3bbd0ce6986b}{keypad\+Row\+Pins}}, \mbox{\hyperlink{micro__config_8h_a129b4baead691e528cc5ddee239919eb}{keypad\+Col\+Pins}}, \mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\+\_\+\+ROWS}}, \mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\+\_\+\+COLS}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Header de configuración de los microcontroladores. 
+
+\begin{DoxyAuthor}{Autor}
+frdy 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+2024-\/06-\/02
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de funciones}
+\Hypertarget{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}\index{micro\_config.h@{micro\_config.h}!button@{button}}
+\index{button@{button}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{button()}{button()}}
+{\footnotesize\ttfamily \label{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e} 
+Button button (\begin{DoxyParamCaption}\item[{BUTTON\+\_\+\+PIN}]{}{, }\item[{true}]{}{}\end{DoxyParamCaption})}
+
+CONFIGURACIÓN BOTON \Hypertarget{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787}\index{micro\_config.h@{micro\_config.h}!dht@{dht}}
+\index{dht@{dht}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{dht()}{dht()}}
+{\footnotesize\ttfamily \label{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787} 
+DHT dht (\begin{DoxyParamCaption}\item[{DHT\+\_\+\+PIN}]{}{, }\item[{DHT\+\_\+\+TYPE}]{}{}\end{DoxyParamCaption})}
+
+CONFIGURACION DHT \Hypertarget{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}\index{micro\_config.h@{micro\_config.h}!lcd@{lcd}}
+\index{lcd@{lcd}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{lcd()}{lcd()}}
+{\footnotesize\ttfamily \label{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126} 
+Liquid\+Crystal lcd (\begin{DoxyParamCaption}\item[{LCD\+\_\+\+RS}]{}{, }\item[{LCD\+\_\+\+EN}]{}{, }\item[{LCD\+\_\+\+D4}]{}{, }\item[{LCD\+\_\+\+D5}]{}{, }\item[{LCD\+\_\+\+D6}]{}{, }\item[{LCD\+\_\+\+D7}]{}{}\end{DoxyParamCaption})}
+
+CONFIGURACION LCD 
+
+\doxysubsection{Documentación de variables}
+\Hypertarget{micro__config_8h_a11f9025ef955263da5731a506b2d830d}\index{micro\_config.h@{micro\_config.h}!KEYPAD\_COLS@{KEYPAD\_COLS}}
+\index{KEYPAD\_COLS@{KEYPAD\_COLS}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_COLS}{KEYPAD\_COLS}}
+{\footnotesize\ttfamily \label{micro__config_8h_a11f9025ef955263da5731a506b2d830d} 
+const byte KEYPAD\+\_\+\+COLS = 4}
+
+Número de columnas del keypad \Hypertarget{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}\index{micro\_config.h@{micro\_config.h}!KEYPAD\_ROWS@{KEYPAD\_ROWS}}
+\index{KEYPAD\_ROWS@{KEYPAD\_ROWS}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{KEYPAD\_ROWS}{KEYPAD\_ROWS}}
+{\footnotesize\ttfamily \label{micro__config_8h_a332148869b2d5d97d18079aa63a2c553} 
+const byte KEYPAD\+\_\+\+ROWS = 4}
+
+CONFIGURACION KEYPAD Número de filas del keypad \Hypertarget{micro__config_8h_a129b4baead691e528cc5ddee239919eb}\index{micro\_config.h@{micro\_config.h}!keypadColPins@{keypadColPins}}
+\index{keypadColPins@{keypadColPins}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{keypadColPins}{keypadColPins}}
+{\footnotesize\ttfamily \label{micro__config_8h_a129b4baead691e528cc5ddee239919eb} 
+byte keypad\+Col\+Pins\mbox{[}\mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\+\_\+\+COLS}}\mbox{]} = \{30, 32, 34, 36\}}
+
+Pines de conexión del keypad (Columnas) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \{30,\ 32,\ 34,\ 36\};\ }
+
+\end{DoxyCode}
+\Hypertarget{micro__config_8h_ab5b0e385bda10b8759ec3bbd0ce6986b}\index{micro\_config.h@{micro\_config.h}!keypadRowPins@{keypadRowPins}}
+\index{keypadRowPins@{keypadRowPins}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{keypadRowPins}{keypadRowPins}}
+{\footnotesize\ttfamily \label{micro__config_8h_ab5b0e385bda10b8759ec3bbd0ce6986b} 
+byte keypad\+Row\+Pins\mbox{[}\mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\+\_\+\+ROWS}}\mbox{]} = \{22, 24, 26, 28\}}
+
+Pines de conección del keypad (Filas) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{22,\ 24,\ 26,\ 28\};\ }
+
+\end{DoxyCode}
+\Hypertarget{micro__config_8h_ac36b2ed2f80b7082e7f445a4e9a46d77}\index{micro\_config.h@{micro\_config.h}!padKeys@{padKeys}}
+\index{padKeys@{padKeys}!micro\_config.h@{micro\_config.h}}
+\doxysubsubsection{\texorpdfstring{padKeys}{padKeys}}
+{\footnotesize\ttfamily \label{micro__config_8h_ac36b2ed2f80b7082e7f445a4e9a46d77} 
+char pad\+Keys\mbox{[}\mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\+\_\+\+ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\+\_\+\+COLS}}\mbox{]}}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{\ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Matriz de caracteres del keypad 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{00046\ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
+\DoxyCodeLine{00047\ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{00048\ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
+\DoxyCodeLine{00049\ \};\ }
+
+\end{DoxyCode}

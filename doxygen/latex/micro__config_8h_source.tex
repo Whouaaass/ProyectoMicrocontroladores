@@ -1,0 +1,50 @@
+\doxysection{micro\+\_\+config.\+h}
+\hypertarget{micro__config_8h_source}{}\label{micro__config_8h_source}\index{sketch/micro\_config.h@{sketch/micro\_config.h}}
+\mbox{\hyperlink{micro__config_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MICRO\_CONFIG\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MICRO\_CONFIG\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <LiquidCrystal.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <Keypad.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <DHT.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}Button.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ DHT\_TYPE\ DHT11}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ DHT\_PIN\ 39}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ PHOTOCELL\_PIN\ A0}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ BUZZER\_PIN\ 7}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ HALL\_PIN\ A1}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ LCD\_RS\ 12}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ LCD\_EN\ 11}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ LCD\_D4\ 5}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ LCD\_D5\ 4}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ LCD\_D6\ 3}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ LCD\_D7\ 2}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ LED\_R\ 8}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ LED\_G\ 9}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ LED\_B\ 10}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ BUTTON\_PIN\ 53}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ LiquidCrystal\ \mbox{\hyperlink{micro__config_8h_a2b069c92e71a060ffceec1578fe4b126}{lcd}}(LCD\_RS,\ LCD\_EN,\ LCD\_D4,\ LCD\_D5,\ LCD\_D6,\ LCD\_D7);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ DHT\ \mbox{\hyperlink{micro__config_8h_a6cfd3910a419b94236d21fd00dcfe787}{dht}}(DHT\_PIN,\ DHT\_TYPE);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{byte}\ \mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\_ROWS}}\ =\ 4;\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{byte}\ \mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\_COLS}}\ =\ 4;\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{micro__config_8h_ac36b2ed2f80b7082e7f445a4e9a46d77}{padKeys}}[\mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\_ROWS}}][\mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\_COLS}}]\ =\ \{}
+\DoxyCodeLine{00045\ \ \ \{\textcolor{charliteral}{'1'},\ \textcolor{charliteral}{'2'},\ \textcolor{charliteral}{'3'},\ \textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{00046\ \ \ \{\textcolor{charliteral}{'4'},\ \textcolor{charliteral}{'5'},\ \textcolor{charliteral}{'6'},\ \textcolor{charliteral}{'B'}\},}
+\DoxyCodeLine{00047\ \ \ \{\textcolor{charliteral}{'7'},\ \textcolor{charliteral}{'8'},\ \textcolor{charliteral}{'9'},\ \textcolor{charliteral}{'C'}\},}
+\DoxyCodeLine{00048\ \ \ \{\textcolor{charliteral}{'*'},\ \textcolor{charliteral}{'0'},\ \textcolor{charliteral}{'\#'},\ \textcolor{charliteral}{'D'}\}}
+\DoxyCodeLine{00049\ \};\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{byte}\ \mbox{\hyperlink{micro__config_8h_ab5b0e385bda10b8759ec3bbd0ce6986b}{keypadRowPins}}[\mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\_ROWS}}]\ =\ \{22,\ 24,\ 26,\ 28\};\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{byte}\ \mbox{\hyperlink{micro__config_8h_a129b4baead691e528cc5ddee239919eb}{keypadColPins}}[\mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\_COLS}}]\ =\ \{30,\ 32,\ 34,\ 36\};\ }
+\DoxyCodeLine{00052\ Keypad\ customKeypad\ =\ Keypad(\ makeKeymap(\mbox{\hyperlink{micro__config_8h_ac36b2ed2f80b7082e7f445a4e9a46d77}{padKeys}}),\ \mbox{\hyperlink{micro__config_8h_ab5b0e385bda10b8759ec3bbd0ce6986b}{keypadRowPins}},\ \mbox{\hyperlink{micro__config_8h_a129b4baead691e528cc5ddee239919eb}{keypadColPins}},\ \mbox{\hyperlink{micro__config_8h_a332148869b2d5d97d18079aa63a2c553}{KEYPAD\_ROWS}},\ \mbox{\hyperlink{micro__config_8h_a11f9025ef955263da5731a506b2d830d}{KEYPAD\_COLS}});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ Button\ \mbox{\hyperlink{micro__config_8h_a70e4443e59fd7b34fac6fe6f54d97d5e}{button}}(BUTTON\_PIN,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -20,32 +20,35 @@
 /* FUNCIONES PREDECLARADAS */
 /**
  * @brief función que maneja la seguridad del estado de la maquina "Inicio"
- * 
+ * Pide una contraseña y verifica si es correcta; también maneja el número de intentos 
+ * y la consideración de que el usuario deje la contraseña incompleta
  */
 void seguridad();
 /**
  * @brief función que maneja el menú del estado de la máquina "Config"
- * 
+ * Muestra un menú en el que se pueden configurar las variables que ponen los límites
+ * cuando se alcanza un registro "peligroso"
  */
 void menu();
 /**
  * @brief función que maneja el estado de la máquina "Bloqueado"
- * 
+ * Muestra el comportamiento cuando el sistema está bloqueado 
  */
 void bloqueo();
 /**
  * @brief función que maneja el estado de la máquina "Alarma"
- * 
+ * Muestra el mensaje de precaución con el sonido que se hace cuando un monitoreo encuentra
+ * una lectura "alta"
  */
 void alarma();
 /**
  * @brief función que maneja el estado de la máquina "MonitoreoEventos"
- * 
+ * Monitorea el sensor de HALL 
  */
 void monitoreoAmbiental();
 /**
  * @brief función que maneja el estado de la máquina "MonitoreoAmbiental"
- * 
+ * Monitorea los sensores de luz, temperatura y humedad* 
  */
 void monitoreoEventos();
 
@@ -110,6 +113,8 @@ void seguridad() {
 
   const char key = customKeypad.getKey();
   if (!key) return;
+
+  taskTimeoutInicioAFK.Start();
 
   if (key != 'A') {
     keypadBuffer.push(key);
